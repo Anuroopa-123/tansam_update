@@ -242,6 +242,30 @@ export class HeroComponent implements OnInit {
       title: 'DPH LAUNCH',
       caption: 'Be a part of our growing community.',
     },
+    {
+      slider_image: 'assets/bannerimage/Army.jpeg',
+      slider_title: 'Sixth Slide',
+      published: true,
+      alt: 'Slide 6',
+      title: 'IASC Building Automation Specialist Training Program',
+      caption: 'Be a part of our growing community.',
+    },
+    {
+      slider_image: 'assets/bannerimage/visit.jpeg',
+      slider_title: 'Seventh Slide',
+      published: true,
+      alt: 'Slide 7',
+      title: 'Sandeep Nanduri(IAS) visited tansam',
+      caption: 'Be a part of our growing community.',
+    },
+    {
+      slider_image: 'assets/bannerimage/Raja.jpeg',
+      slider_title: 'Eigth Slide',
+      published: true,
+      alt: 'Slide 8',
+      title: 'TRB RAJA MINISTER',
+      caption: 'Be a part of our growing community.',
+    },
   ];
 
   latestNews: NewsItem[] = [
