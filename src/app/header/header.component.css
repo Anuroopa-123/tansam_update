@@ -252,10 +252,12 @@
 }
 
 /* Specifically limit Siemens logo to match others */
-.logo-right img[alt="Siemens Logo"] {
-  height:24px;
+/* Specifically limit Siemens logo now on left */
+.logo-left img[alt="Siemens Logo"] {
+  height: 24px;
   object-fit: contain;
 }
+
 
 /* Center title container */
 .header-title {
