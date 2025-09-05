@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* body{
+  padding-top: 60px;
+  margin: 0;
+} */
+/* Ensures the header elements (social media, notification, buttons) are in a single row */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color:#009999;
+}
+
+/* Social Media Icons */
+.socialmedia {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}
+
+.socialmedia a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.4s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Rotate Effect */
+.socialmedia a:hover {
+  transform: rotate(360deg);
+}
+
+/* Unique Background Colors */
+.facebook {
+  background: #1877f2;
+}
+
+.twitter {
+  background: black;
+  /* X (Twitter) */
+}
+
+.instagram {
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.linkedin {
+  background: #0077b5;
+}
+
+/* Glow Effect */
+.socialmedia a:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* Hover Scale Effect */
+.socialmedia a:hover i {
+  transform: scale(1.2);
+}
+
+/* Icon Style */
+.socialmedia i {
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+/* Pulse Effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Scrolling Notification Container */
+.scrollingnotif {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #0a5296;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  width: auto;
+  font-family: "Afacad Flux", serif;
+}
+
+.notification-frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  background-color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  position: relative;
+  max-width: 100%;
+}
+
+/* Default Notification (Static text on left) */
+.default-notification {
+  color: #0a5296;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #b4b4b4;
+  border-radius: 15px 0px 15px 0px;
+  margin-right: 15px;
+}
+
+/* Scrolling Content */
+.scrolling-content {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.notification-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.notification-text {
+  color: #0a5296;
+  font-size: 18px;
+  font-weight: normal;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+  margin: 0;
+  animation-play-state: running;
+  font-weight: 700;
+}
+
+/* Make the icon red */
+.notification-link i {
+  color: red;
+
+}
+
+/* Pause animation on hover */
+.notification-text:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.topright-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Align the right-side elements in a row */
+.topright,
+.rightside {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  gap: 15px;
+  font-family: "Afacad Flux", serif;
+}
+
+.topright {
+  margin-right: 10px;
+  background: #009999;
+  border-radius: 8px;
+
+
+}
+
+.topright a {
+  color: #F3E5AB !important;
+  padding: 5px 10px;
+}
+
+.topright:hover {
+  background: #F3E5AB;
+}
+
+.topright a:hover {
+  color: #009999 !important;
+}
+.topright a,
+.rightside a {
+  text-decoration: none;
+  color: #009999;
+  font-weight: bold;
+}
+
+/* Container with flex for horizontal alignment */
+.logosection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 99px;
+  background-color: white;
+  gap: 20px;
+  flex-wrap: nowrap; /* no wrapping */
+}
+
+/* Left and Right Logos containers */
+.logo-left,
+.logo-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logos size */
+.logo-left img,
+.logo-right img {
+  height: 90px;
+  object-fit: contain;
+}
+
+/* Specifically limit Siemens logo to match others */
+.logo-right img[alt="Siemens Logo"] {
+  height:24px;
+  object-fit: contain;
+}
+
+/* Center title container */
+.header-title {
+  flex: 1;
+  text-align: center;
+}
+
+/* Main title */
+.header-title .main-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #01539A;
+  margin: 0;
+  white-space: nowrap; /* keep it single line */
+  font-family: "Red Rose", serif;
+}
+
+/* Subtitle below main title */
+.subtitle {
+  font-size: 18px;
+  font-weight: normal;
+  color: #01539A;
+  margin-top: 4px;
+  font-family: "Red Rose", serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logosection {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header-title .main-title {
+    white-space: normal;
+    font-size: 22px;
+  }
+  .header-title {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .logo-left, .logo-right {
+    order: 1;
+    gap: 10px;
+  }
+}
+
+
+/* RIGHT SIDE: Single logo */
+.imagesection:last-child {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagesection:last-child img {
+  max-width: 100%;
+  height: 90px;
+}
+
+
+/* General Navbar Styling */
+.navbar {
+  /* position: fixed; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 0px 0;
+  color: #000 ;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -46px;
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid #ccc;
+
+}
+
+/* .navbar.sticky {
+  background: rgba(0, 153, 153, 0.9);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+} */
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list .active {
+  font-family: "Ubuntu", serif;
+}
+
+.nav-list li {
+  position: relative;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000 ;
+  transition: 0.3s;
+}
+
+/* Hover Effect (Only Changes Color, Does NOT Open Dropdown) */
+.nav-list li a:hover,
+.nav-list li span:hover {
+  color: #009999;
+}
+
+.nav-list li a:hover,
+.nav-list li span {
+  font-family: "Ubuntu", serif;
+  font-size: 18px;
+}
+
+.active i {
+  font-size: 10px;
+
+}
+
+/* Dropdown Menu Styling */
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #ffffff;
+  min-width: 240px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  z-index: 999;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #009999;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-menu li:hover {
+  background-color: #fff;
+  color: #009999;
+  cursor: pointer;
+
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: inherit;
+  flex-grow: 1;
+}
+
+/* Right arrow (chevron) on right side */
+.dropdown-menu li::after {
+  content: '\f105'; /* FontAwesome: fa-chevron-right */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 15px;
+  color: #009999;
+  transition: transform 0.3s ease;
+}
+
+/* On hover, change chevron color */
+.dropdown-menu li:hover::after {
+  color: #000;
+  transform: translateX(4px);
+}
+
+/* Sub-Dropdown Styling - Appears on the Left */
+.sub-dropdown {
+  position: absolute;
+  left: 230px;
+  top: 20%;
+  background: #fff;
+  display: none;
+  min-width: 200px;
+  color: #009999 !important;
+  font-size: 15px;
+  padding-left: 0px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sub-dropdown li:hover {
+  background-color: #009999;
+  font-size: 15px;
+}
+
+.dropdown-menu li:hover .sub-dropdown {
+  display: block;
+}
+
+.sub-dropdown li a {
+  color: #009999 !important;
+  /* Ensures text color remains consistent */
+}
+
+.sub-dropdown li i {
+  color: #009999 !important;
+  /* Ensures icon color remains consistent */
+}
+
+/* Hover Effect */
+.sub-dropdown li:hover {
+  background-color: #009999;
+  /* Background change on hover */
+}
+
+.sub-dropdown li:hover a,
+.sub-dropdown li:hover i {
+  color: #F3E5AB !important;
+  /* Change text and icon color on hover */
+}
+
+
+/* HAMBURGER MENU (FOR MOBILE) */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* Overlay */
+/* Full-Screen Dull Overlay */
+.dull-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent dark background */
+  backdrop-filter: blur(5px);
+  /* Blurred background */
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show dull overlay when active */
+.dull-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Right Side Overlay Panel */
+.overlay-panel {
+  position: fixed;
+  top: 0;
+  right: -500px; /* Initially hidden off-screen */
+  width: 450px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 1100;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 20px 0 0 20px;
+  /* Rounded left edges */
+}
+
+/* Make panel visible */
+.overlay-panel.visible {
+  right: 0;
+}
+
+/* Panel Content Styling */
+.panel-content {
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #009999;
+}
+
+.panel-content img {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+.panel-content p {
+  font-size: 14px;
+  color: #009999;
+  line-height: 1.5;
+  text-align: justify;
+  font-family: "Poppins", serif;
+}
+
+/* Contact Section */
+.panel-content2 h3 {
+  color: #01539A;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+  font-family: "Poppins", serif;
+}
+
+/* Contact Details */
+.contact-details {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.detail i {
+  color: #009999;
+  font-size: 16px;
+}
+
+.detail p {
+  font-size: 13px !important;
+  color: #333;
+  margin: 0;
+  font-family: "Poppins", serif;
+}
+
+.detail a {
+  text-decoration: none;
+  color: #007777;
+  font-weight: bold;
+}
+
+/* Submit Button */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #009999;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #007777;
+}
+
+/* Right Side Toggle Button */
+.rightsideframe {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #009999;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+  z-index: 1200;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.rightsideframe i {
+  color: white;
+  font-size: 22px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate the icon when the panel is open */
+.rightsideframe.open i {
+  transform: rotate(180deg);
+}
+
+/* Responsive Design for Mobile & Tablets */
+@media (max-width: 1024px) {
+
+  /* Header - Stack elements properly */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* gap: 10px; */
+  }
+
+  .scrollingnotif {
+    order: -1;
+    margin-bottom: 10px;
+  }
+
+  /* Logo Section - Center align */
+  .logosection {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+
+  }
+
+
+  .imagesection,
+  .title {
+    width: 100%;
+  }
+
+  .title a img {
+    width: 50px;
+  }
+
+  .title .title-top {
+    font-size: 18px;
+  }
+
+  .title .title-bottom {
+    font-size: 14px;
+  }
+
+  /* Navigation - Full-width dropdown on smaller screens */
+  .navbar {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #009999;
+    display: none;
+    padding: 10px 0;
+  }
+
+  .nav-list.active {
+    display: flex;
+    margin: 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Overlay Panel - Full screen on mobile */
+  .overlay-panel {
+    width: 80%;
+    /* Make it wider on tablets */
+    max-width: 400px;
+    right: -100%;
+    border-radius: 0;
+  }
+
+  .overlay-panel.visible {
+    right: 0;
+  }
+
+  .rightsideframe {
+    top: 50%;
+    right: -5px;
+    /* Keep it slightly inside the screen */
+    padding: 8px;
+  }
+
+  .rightsideframe i {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* Overlay Panel - Take full screen on mobile */
+    .overlay-panel {
+      width: 90%;
+      right: -100%;
+      height: 100%;
+      border-radius: 0;
+      padding: 0;
+    }
+
+    .overlay-panel.visible {
+      right: 0;
+      padding: 10px;
+    }
+
+    .rightsideframe {
+      position: fixed;
+      top: 50%;
+      /* Centers it vertically */
+      right: 0;
+      /* Aligns it to the right edge */
+      transform: translateY(-50%);
+      /* Ensures perfect vertical centering */
+      background: #009999;
+      padding: 12px;
+      border-radius: 10px 0 0 10px;
+      /* Keep rounded left edge */
+      cursor: pointer;
+      z-index: 1200;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .rightsideframe i {
+      font-size: 20px;
+      color: white;
+      transition: transform 0.3s ease-in-out;
+    }
+  /* Submit Button */
+  .btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .scrollingnotif {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Prevents wrapping */
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    text-align: center;
+    /* padding: 5px; */
+    overflow: hidden;
+    /* Prevents overflow */
+  }
+
+  .notification-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    overflow: hidden;
+    /* Ensures content stays in one line */
+  }
+
+  .default-notification {
+    font-size: 12px;
+    padding: 5px 8px;
+    margin-right: 10px;
+    /* Add some space between elements */
+    white-space: nowrap;
+  }
+
+  .scrolling-content {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    /* Ensures content stays in a single line */
+  }
+
+  .notification-text {
+    font-size: 13px;
+    display: inline-block;
+    animation-duration: 10s;
+    /* Speed up for smaller screens */
+    white-space: nowrap;
+    /* Keeps text in one line */
+  }
+
+  .socialmedia {
+    display: none;
+  }
+
+  .topright-container {
+    display: flex;
+    /* Enables flex layout */
+    flex-direction: row;
+    /* Ensures they appear in a row */
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Aligns items in the center */
+    gap: 10px;
+    /* Adds space between the items */
+    width: 100%;
+    /* Ensures it takes full width */
+  }
+
+  .topright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #009999;
+    border-radius: 8px;
+    padding: 0px 5px;
+    text-align: center;
+  }
+
+  .topright a {
+    color: #F3E5AB !important;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .topright:hover {
+    background: #F3E5AB;
+  }
+
+  .topright a:hover {
+    color: #009999 !important;
+  }
+
+  .rightside {
+    display: none;
+  }
+
+  .imagesection:nth-child(3) img {
+    height: 40px;
+  }
+}

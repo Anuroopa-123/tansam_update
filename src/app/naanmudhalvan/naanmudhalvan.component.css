@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.define{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    text-align: center;
+    color: #01539A;
+    font-family: "Ubuntu", serif;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.description{
+    text-align: justify;
+    width: 70%;
+    margin: 0 auto;
+    color: #009999;
+    font-family: "Poppins", serif;
+}
+
+.color h2 {
+    color: #009999 !important;
+    margin-left: 40px;
+    font-family: "Afacad Flux", serif;
+    display: inline-block;
+    position: relative;
+}
+
+.color h2:after {
+    content: "";
+    display: block;
+    height: 1.2px;
+    background-color: #F3E5AB;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+}
+
+/* General Styles for Tables */
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    font-family: "Afacad Flux", serif;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+td {
+    color: #333;
+    font-family: "Ubuntu", serif;
+}
+
+th {
+    background-color: #009999 !important;
+    color: #F3E5AB;
+}
+
+/* Hover effects for rows */
+tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Alternate row colors for better readability */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Style for Total Row */
+tbody tr:last-child {
+    font-weight: bold;
+    background-color: #d1ecf1;
+}
+
+tbody tr:last-child td {
+    text-align: center;
+    color: #333;
+}
+
+/* Adding custom styles for the Total row */
+tbody tr:last-child td:first-child {
+    text-align: center;
+    font-weight: bold;
+    color: #007bff;
+}
+
+tbody tr:last-child td {
+    font-size: 16px;
+    background-color: #f0f8ff;
+}
+
+/* Change color for STUDENTS COUNT column in the total row */
+tbody tr:last-child td:nth-child(6) {
+    background-color: #F3E5AB;
+    color: #009999;
+    font-weight: bold;
+}
+
+/* Adding smooth transition to table */
+table {
+    transition: all 0.3s ease;
+}
+
+table:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .define {
+        padding: 0 15px;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .description {
+        width: 100%;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .color h2 {
+        font-size: 18px;
+        margin-left: 0;
+        padding-left: 10px;
+    }
+
+    /* Add a wrapper for the table with scrolling */
+    .table-container {
+        width: 100%;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    tbody tr:last-child td {
+        font-size: 14px;
+    }
+}

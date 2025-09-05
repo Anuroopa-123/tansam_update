@@ -1,0 +1,29 @@
+<!-- Popup Overlay (Only Shows Once) -->
+<div class="popup-overlay" *ngIf="showPopup">
+    <div class="popup">
+      <!-- Previous Button -->
+      <button class="nav-btn prev" (click)="prevImage()" [disabled]="currentImageIndex === 0">❮</button>
+
+      <!-- Popup Image -->
+      <img [src]="popupImages[currentImageIndex]" alt="Popup Image">
+
+      <!-- Next Button -->
+      <button class="nav-btn next" (click)="nextImage()" [disabled]="currentImageIndex === popupImages.length - 1">❯</button>
+
+      <!-- Close Button -->
+      <button class="close-btn" (click)="closePopup()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+</div>
+
+<!-- Main Content (Blurred when popup is active) -->
+<div class="content" [class.blurred]="showPopup">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+
+    <!-- Back to Top Button -->
+    <button class="button" (click)="scrollToTop()" [class.show]="showBackToTop">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</div>
+

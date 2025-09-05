@@ -1,0 +1,325 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap');
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Poppins", serif;
+}
+
+/* Top */
+.top_title {
+  width: 70%;
+  max-width: fit-content;
+  text-align: justify;
+  font-size: 18px;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #003366;
+  margin-top: 2rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+.center-list li,
+.audience-list li,
+.services-list li {
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  border: none;
+}
+
+.card h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "Faculty Glyphic", serif;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 600px;
+
+}
+
+.services-list li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  width: 100%;
+}
+
+.services-list li::before {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  color: #009999;
+}
+
+/* MAIN lab Section */
+.lab-section {
+  width: 100% !important;
+  max-width: 90%;
+  color: #333;
+}
+
+.lab-container {
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fafafa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lab-slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lab-title h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #009999;
+  font-family: "Faculty Glyphic", serif;
+
+}
+
+.lab-slide {
+  display: flex;
+  gap: 5rem;
+  align-items: stretch;
+  /* Ensures full-height flex children */
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.lab-image {
+  flex: 1 1 400px;
+  max-width: 650px;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lab-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lab-details {
+  flex: 1 1 400px;
+  max-width: 850px;
+  min-width: 200px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  font-family: "Ubuntu", serif;
+}
+
+.software {
+  margin-top: 20px;
+}
+
+.software p strong {
+  font-size: 1.2rem;
+  color: #003366;
+  font-family: "Faculty Glyphic", serif;
+  padding-left: 5px;
+}
+
+.tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+  z-index: 10;
+  position: relative;
+}
+
+.lab-tab {
+  background-color: #009999;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #F3E5AB;
+  transition: background 0.3s ease
+}
+
+.lab-tab:hover {
+  background-color: #F3E5AB;
+  color: #009999;
+
+}
+
+.active-tab {
+  background-color: #F3E5AB;
+  color: #009999;
+  box-shadow: 0 0 10px rgba(0, 174, 239, 0.4);
+}
+
+.lab-slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lab-image {
+  position: relative;
+  flex: 1;
+}
+
+.lab-details {
+  position: relative;
+  flex: 1;
+}
+
+
+.left-arrow {
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10, 82, 150, 0.7);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+.right-arrow {
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10, 82, 150, 0.7);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+
+/* Tablet View: 768px and below */
+@media screen and (max-width: 768px) {
+  .lab-slide {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .lab-image,
+  .lab-details {
+    max-width: 100%;
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .lab-details {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .lab-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .services-list {
+    align-items: center;
+  }
+
+  .services-list li {
+    font-size: 15px;
+  }
+
+  .top_title {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+/* Mobile View: 480px and below */
+@media screen and (max-width: 480px) {
+  section {
+    padding: 1rem;
+  }
+
+  .lab-title h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .lab-details {
+    font-size: 0.95rem;
+  }
+
+  .software p strong {
+    font-size: 1rem;
+  }
+
+  .services-list {
+    gap: 0.75rem;
+  }
+
+  .services-list li {
+    padding-left: 1.5rem;
+    font-size: 14px;
+  }
+
+  .services-list li::before {
+    top: 0.2rem;
+  }
+
+  .top_title {
+    font-size: 15px;
+  }
+}

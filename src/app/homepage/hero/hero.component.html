@@ -1,0 +1,43 @@
+<!-- Wrapper with horizontal padding -->
+<div class="container">
+  <div class="hero-section">
+    <!-- Slider Left -->
+    <div class="hero-slider">
+      <div class="slider" [ngStyle]="{ transform: 'translateX(' + -currentIndex * 100 + '%' }">
+        <div *ngFor="let image of images" class="slide">
+          <img [src]="image.slider_image" [alt]="image.alt" />
+          <div class="caption">
+            <h3>{{ image.title }}</h3>
+            <p>{{ image.caption }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrows -->
+      <!-- <button class="arrow prev" (click)="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="arrow next" (click)="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button> -->
+    </div>
+
+    <!-- Latest News Right -->
+    <!-- <div class="hero-news">
+      <h3 class="latest-heading">Latest News</h3>
+      <div *ngFor="let news of latestNews | slice : 0 : 3" class="news-card" (click)="openNewsDetail(news)">
+        <img [src]="news.news_image" alt="news" class="news-image" />
+        <div class="news-content">
+          <h4>{{ news.title }}</h4>
+          <p class="news-date">
+            <i class="fa-regular fa-calendar-days"></i> {{ news.date | date : "ddMMM'y" }}
+          </p>
+        </div>
+      </div>
+
+      <button class="cta" (click)="showMoreNews()">
+        <span>More News</span>
+        <svg width="10px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div> -->

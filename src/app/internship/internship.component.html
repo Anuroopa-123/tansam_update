@@ -1,0 +1,126 @@
+<div class="title">
+    <h2>Book Your Internship Slot</h2>
+</div>
+
+<div class="card">
+    <div class="image-container">
+        <img [src]="images[0]" alt="Internship Image">
+    </div>
+
+    <div class="form-container">
+        <form [formGroup]="internshipForm" (ngSubmit)="submitForm()" novalidate>
+            <div class="form-grid">
+
+                <!-- Full Name -->
+                <div class="input-group">
+                    <input id="fullName" type="text" formControlName="fullName" placeholder=" " required>
+                    <label for="fullName">Full Name</label>
+                    <div class="error"
+                        *ngIf="internshipForm.controls['fullName'].invalid && internshipForm.controls['fullName'].touched">
+                        Full Name is required.
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="input-group">
+                    <input id="email" type="email" formControlName="email" placeholder=" " required>
+                    <label for="email">Email</label>
+                    <div class="error"
+                        *ngIf="internshipForm.controls['email'].invalid && internshipForm.controls['email'].touched">
+                        Valid Email is required.
+                    </div>
+                </div>
+
+                <!-- Contact Number -->
+                <div class="input-group">
+                    <input id="contactNumber" type="text" formControlName="contactNumber" placeholder=" " required>
+                    <label for="contactNumber">Contact Number</label>
+                    <div class="error"
+                        *ngIf="internshipForm.controls['contactNumber'].invalid && internshipForm.controls['contactNumber'].touched">
+                        Enter a valid 10-digit contact number.
+                    </div>
+                </div>
+
+                <!-- College Name -->
+                <div class="input-group">
+                    <input id="collegeName" type="text" formControlName="collegeName" placeholder=" " required>
+                    <label for="collegeName">College Name</label>
+                    <div class="error"
+                        *ngIf="internshipForm.controls['collegeName'].invalid && internshipForm.controls['collegeName'].touched">
+                        College Name is required.
+                    </div>
+                </div>
+
+                <!-- Start Date -->
+                <div class="input-group">
+                    <input id="startDate" type="date" formControlName="startDate" required>
+                    <label for="startDate">Start Date</label>
+                    <div class="error"
+                        *ngIf="internshipForm.controls['startDate'].invalid && internshipForm.controls['startDate'].touched">
+                        Start Date is required.
+                    </div>
+                </div>
+
+                <!-- End Date -->
+                <div class="input-group">
+                    <input id="endDate" type="date" formControlName="endDate" required>
+                    <label for="endDate">End Date</label>
+                    <div class="error"
+                        *ngIf="internshipForm.controls['endDate'].invalid && internshipForm.controls['endDate'].touched">
+                        End Date is required.
+                    </div>
+                </div>
+
+                <!-- Duration -->
+                <div class="input-group">
+                    <select id="duration" formControlName="duration" required>
+                        <option value="">Select Duration</option>
+                        <option value="1 month">1 Month</option>
+                        <option value="3 months">3 Months</option>
+                        <option value="6 months">6 Months</option>
+                    </select>
+                    <label for="duration">Duration</label>
+                    <div class="error"
+                        *ngIf="internshipForm.controls['duration'].invalid && internshipForm.controls['duration'].touched">
+                        Duration is required.
+                    </div>
+                </div>
+
+                <!-- Course -->
+                <div class="input-group">
+                    <select id="course" formControlName="course" required>
+                        <option value="">Select Course</option>
+                        <option value="nxcad">NX Cad</option>
+                        <option value="mendix">Mendix</option>
+                        <option value="simulation">Simulation</option>
+                        <option value="mindsphere">IOT with Mindsphere</option>
+                        <option value="plcpcb">PLC & PCB</option>
+                        <option value="arvr">AR/VR</option>
+                        <option value="dataanalytics">Data Analytics using Power BI</option>
+                        <option value="fullstackdevelopment">Full Stack Development</option>
+                        <option value="aiml">AI/ML</option>
+                    </select>
+                    <label for="course">Course</label>
+                    <div class="error"
+                        *ngIf="internshipForm.controls['course'].invalid && internshipForm.controls['course'].touched">
+                        Course selection is required.
+                    </div>
+                </div>
+
+                <!-- Referred By -->
+                <div class="input-group">
+                    <input id="referredBy" type="text" formControlName="referredBy" placeholder=" ">
+                    <label for="referredBy">Referred By</label>
+                </div>
+
+            </div>
+            <!-- Submit Button -->
+            <div class="submitbtn">
+                <button type="submit" [disabled]="internshipForm.invalid || formSubmitted" class="btn-submit">
+                    Apply Now
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>

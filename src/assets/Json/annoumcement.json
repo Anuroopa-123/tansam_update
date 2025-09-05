@@ -1,0 +1,51 @@
+{
+    "announcements": [
+      {
+        "imageUrl": "assets/headerimage/Banner.jpeg",
+        "altText": "Image Announcement"
+      }
+    ],
+    "courses": [
+      {
+        "title": "Course Title 1",
+        "startDate": "January 15, 2025",
+        "time": "10:00 AM - 12:00 PM",
+        "imageUrl": "/assets/headerimage/VirtualCommisioning .jpg",
+        "personnumber": "9789565456",
+        "personmail": "aravindhshankar@tansam.org",
+        "description": "",
+        "labs":"AR|VR|MR"
+      },
+      {
+        "title": "Course Title 2",
+        "startDate": "January 16, 2025",
+        "time": "10:00 AM - 12:00 PM",
+        "personnumber": "9789565456",
+        "personmail": "aravindhshankar@tansam.org",
+        "imageUrl": "/assets/headerimage/TecnomatixPlantSimulation.jpg",
+        "description": "",
+                "labs":"AR|VR|MR"
+      },
+      {
+        "title": "Course Title 3",
+        "startDate": "January 17, 2025",
+        "time": "10:00 AM - 12:00 PM",
+        "personnumber": "9789565456",
+        "personmail": "aravindhshankar@tansam.org",
+        "imageUrl": "/assets/headerimage/Roboticsandautomation.jpg",
+        "description": "",
+        "labs":"Innovative Manufacturing"
+      },
+      {
+        "title": "Course Title 4",
+        "startDate": "January 18, 2025",
+        "time": "10:00 AM - 12:00 PM",
+        "personnumber": "9789565456",
+        "personmail": "aravindhshankar@tansam.org",
+        "imageUrl": "/assets/headerimage/RoboticSimulation.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum enim ab accusantium alias reprehenderit iste velit, rerum quas atque temporibus!",
+        "labs":"AR|VR|MR"
+      }
+    ]
+  }
+  

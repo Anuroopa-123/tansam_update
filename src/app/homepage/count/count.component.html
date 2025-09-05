@@ -1,0 +1,20 @@
+<div class="count-container">
+    <!-- Static text with changing last word -->
+    <div class="dropping-texts">
+        <p class="static-text">{{ staticText }}</p> <!-- Dynamic Static Text -->
+        <div class="animated-text-container">
+            <span [ngClass]="{'zoom-text': isFinalText}" class="animated-text">
+                {{ animatedText }}
+            </span>
+        </div>
+    </div>
+
+    <!-- Cards with Number Animation (Only Show After Text Animation) -->
+    <div *ngIf="showCards" class="card-wrapper">
+        <div class="card" *ngFor="let card of cards">
+            <i [class]="card.icon" class="card-icon"></i> <!-- Font Awesome Icon -->
+            <h1 class="animated-number">{{ card.animatedNumber || 0 }}</h1>
+            <p>{{ card.text }}</p>
+        </div>
+    </div>
+</div>

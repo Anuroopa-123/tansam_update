@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    transition: font-size 0.3s ease;
+
+  }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  /* width: 100%; */
+
+}
+
+/* Topline Content (Social Media + Font Size Controls) */
+.topline {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Social Media Icons */
+.socialmedia {
+  display: flex;
+  justify-content: left;
+  gap: 7px;
+  padding: 5px 0;
+}
+
+.socialmedia a {
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+/* Icon-specific Colors */
+.socialmedia a.facebook {
+  color: #1877f2; /* Facebook blue */
+}
+
+.socialmedia a.twitter {
+  color: #000000; /* Twitter black */
+}
+
+socialmedia a.instagram {
+  color: #f76580; /* Instagram red/pink */
+}
+
+.socialmedia a.linkedin {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+/* Social Media Hover Effect */
+.socialmedia a:hover {
+  transform: rotate(360deg); /* 360-degree spin */
+}
+
+/* Font Size Controls */
+.font-size-controls {
+  display: flex;
+  gap: 10px; /* Space between font size buttons */
+}
+
+/* Right Side (Site Map Button) */
+.rightside {
+  margin-left: auto;
+  margin-right: 30px;
+}
+.rightside a {
+  font-family: "Gruppo", serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #0a5296;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+/* Right Side Button Hover Effect */
+.rightside a:hover {
+  background-color: #458fe4;
+  transform: scale(1.05);
+}
+
+/* Scrolling Notification Container */
+.scrollingnotif {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center; /* Aligns to the left */
+  /* padding: 10px; */
+  font-size: 16px;
+  color: #0a5296;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  /* margin: 0 20px; */
+  width: auto;
+  font-family: "Nunito", serif;
+}
+
+/* Notification Frame */
+.notification-frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  background-color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  position: relative;
+  max-width: 100%;
+}
+
+/* Default Notification (Static text on left) */
+.default-notification {
+  color: #0a5296;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #b4b4b4;
+  border-radius: 15px 0px 15px 0px;
+  margin-right: 15px; /* Space between default notification and scrolling content */
+}
+
+/* Scrolling Content */
+.scrolling-content {
+  display: flex;
+  flex: 1;
+  justify-content:center;
+  overflow: hidden;
+}
+
+.notification-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent (e.g., black or dark gray) */
+}
+
+.notification-text {
+  color: #0a5296;
+  font-size: 18px;
+  font-weight: normal;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite; /* Scrolling animation */
+  margin: 0;
+  animation-play-state: running;
+  font-weight: 700;
+}
+
+/* Make the icon red */
+.notification-link i {
+  color: red; /* Set the icon color to red */
+}
+
+/* Pause animation on hover */
+.notification-text:hover {
+  animation-play-state: paused; /* Pause the animation */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End off-screen to the left */
+  }
+}
+
+/* Button section */
+.topright a {
+  display: inline-block;
+  font-family: "Gruppo", serif;
+  padding: 8px 16px;
+  background-color: #0a5296;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-right: 55px;
+}
+
+.topright a:hover {
+  background-color: #70BE44;
+  color: #063774;
+  cursor: pointer;
+}
+
+/* Hide scrolling notification and center topline on mobile */
+@media (max-width: 767px) {
+  .scrollingnotif .topright {
+    display: none; /* Hide scrolling notification */
+  }
+
+  .rightside{
+    display: none;
+  }
+
+  .topline {
+    justify-content: center; /* Center align the topline content */
+    width: 100%; /* Ensure full width */
+  }
+
+  .socialmedia {
+    justify-content: center; /* Center align social media icons */
+  }
+
+  .rightside {
+    margin: 10px auto; /* Center the Site Map button */
+    text-align: center;
+  }
+}

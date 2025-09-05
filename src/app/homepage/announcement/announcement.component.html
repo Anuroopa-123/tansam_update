@@ -1,0 +1,65 @@
+<div class="title">
+  <h3 data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    Entrepreneurship Development
+  </h3>
+</div>
+<div class="announcement-container">
+  <!-- Left Side: Announcements -->
+  <div class="left-panel">
+    <div class="panel-heading">Workshop Registration</div>
+    <p class="panel-subtext">
+      Join our intensive workshops led by industry leaders and domain specialists
+    </p>
+    <div class="announcement-box" *ngFor="let announcement of announcements">
+      <img [src]="announcement.imageUrl" [alt]="announcement.altText" />
+    </div>
+  </div>
+
+  <!-- Right Side: Courses -->
+  <div class="right-panel">
+    <div class="panel-content">
+      <div class="panel-heading">Register for courses</div>
+      <p class="panel-subtext">
+        Learn from experts. Build your foundation. Become market-ready.
+      </p>
+    </div>
+    <div class="course-box" *ngFor="let course of courses">
+      <div class="course-card">
+        <div class="course-image">
+          <img
+            *ngIf="course.imageUrl"
+            [src]="course.imageUrl"
+            alt="{{ course.title }}"
+            class="course-img"
+          />
+          <div class="overlay">
+            <h3 class="course-title">{{ course.title }}</h3>
+            <div class="course-details">
+              <p class="course-date">Start Date: {{ course.startDate }}</p>
+              <p class="course-time">Time: {{ course.time }}</p>
+              <p class="course">Labs: {{ course.labs }}</p>
+              <div class="course-actions">
+                <button class="mode-btn">Mode</button>
+                <button
+                  class="css-button-arrow--sky"
+                  (click)="handleCourseSelection(course)"
+                >
+                  Register
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="morbtn">
+      <button class="cta" (click)="viewAllCourses()">
+        <span>More</span>
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,132 @@
+.bold {
+    font-weight: bold;
+}
+
+
+
+/* main css*/
+
+/* Sitemap container centered with padding */
+
+/* --- General Container Styling --- */
+.sitemap-container {
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f0f4f8;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.sitemap-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    width: 100%;
+    max-width: 300px;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+
+/* --- Box (Section) Styling --- */
+.box {
+    background-color: #ffffff;
+    border: 1.5px solid #00406B;
+    border-radius: 10px;
+    padding: 18px 25px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 64, 107, 0.2);
+}
+
+/* --- Header Titles --- */
+h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #00406B;
+    margin: 0;
+}
+
+/* --- Submenu Items --- */
+.submenu {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+    padding-left: 20px;
+}
+
+.submenu a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.submenu a:hover {
+    color: #00406B;
+    text-decoration: underline;
+}
+
+/* --- Nested Submenu --- */
+.nested-submenu {
+    margin-top: 8px;
+    padding-left: 20px;
+    border-left: 2px solid #ccc;
+}
+
+.nested-submenu a {
+    font-size: 14px;
+    color: #555;
+}
+
+/* --- Font Awesome Icons --- */
+i.fa {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #00406B;
+    transition: transform 0.3s ease-in-out;
+}
+
+i.fa-chevron-up {
+    transform: rotate(180deg);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .sitemap-column {
+        flex-direction: column;
+    }
+
+    .box {
+        padding: 16px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .submenu a,
+    .nested-submenu a {
+        font-size: 14px;
+    }
+}

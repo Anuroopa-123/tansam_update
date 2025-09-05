@@ -1,0 +1,746 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Default Banner with Overlay */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.banner-overlay h1 {
+  font-family: "Afacad Flux", sans-serif;
+}
+
+/* Main Content Layout */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Course Details Section */
+.course-details {
+  flex: 1;
+  padding: 20px;
+  /* background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  border-radius: 8px;
+}
+
+.course-details h2 {
+  color: #009999;
+  margin-bottom: 10px;
+  font-family: "Ubuntu", sans-serif;
+
+}
+
+.course-details strong {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 19px;
+  color: #01539A;
+}
+
+.course-details p {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Payment Card */
+.payment-card {
+  width: 370px;
+  padding: 20px;
+  background: #009999;
+  /* background: linear-gradient(135deg, #007bff, #0056b3); */
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  position: relative;
+  top: -80px;
+  /* Overlapping effect */
+}
+
+.register h2 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+@keyframes blinkText {
+  0% {
+    color: #ffcc00;
+  }
+
+  50% {
+    color: transparent;
+  }
+
+  100% {
+    color: #ffcc00;
+  }
+}
+
+.colorblink p {
+  animation: blinkText 2s infinite;
+  text-align: end;
+  font-family: "Poppins", sans-serif;
+  color: #e6b800;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.colorblink strong {
+  color: #F3E5AB;
+  margin-right: 5px;
+}
+
+.colorblink i {
+  color: #F3E5AB;
+}
+
+.refer {
+  font-family: "Poppins", sans-serif;
+  text-align: start;
+}
+
+.refer strong {
+  color: #F3E5AB;
+  margin-right: 5px;
+}
+
+.refer a {
+  color: #F3E5AB;
+}
+
+.refer a:hover {
+  color: #f3e5aba8;
+}
+
+.pay-button {
+  width: 100%;
+  padding: 10px;
+  background: #ffcc00;
+  color: #333;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-button:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .payment-card {
+    width: 100%;
+    top: 0;
+  }
+}
+
+/* Horizontal Divider */
+.divider {
+  margin: 40px auto;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  border: none;
+}
+
+/* Social Media Share Section */
+.social-share {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.social-share span {
+  font-size: 22px;
+  /* color: #01539A; */
+  color: #009999;
+  margin-right: 10px;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Social Media Buttons */
+.social-btn {
+  display: inline-block;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+
+.fb {
+  background: #1877f2;
+}
+
+/* Facebook */
+.twitter {
+  background: black;
+}
+
+/* Twitter */
+.linkedin {
+  background: #0077b5;
+}
+
+/* LinkedIn */
+.whatsapp {
+  background: #25d366;
+}
+
+/* WhatsApp */
+
+.social-btn:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .divider {
+    width: 90%;
+  }
+
+  .social-btn {
+    margin: 5px;
+  }
+}
+
+/* 
+Card View
+*/
+
+.title {
+  text-align: end;
+}
+
+.title h3 {
+  color: red;
+  font-family: "Afacad Flux", sans-serif;
+  animation: blink 1s infinite alternate;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* General Grid Styling */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Ensures three equal columns */
+  gap: 20px;
+  padding: 10px;
+  max-width: 1140px;
+  /* 3 * 360px + gaps */
+  margin: 0 auto;
+  /* Centers the grid */
+  justify-content: center;
+  /* Ensures grid items are centered */
+}
+
+/* Course Card */
+.course-card {
+  position: relative;
+  padding: 15px;
+  cursor: pointer;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 360px;
+  /* Matches the course-card width */
+  height: 340px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+
+/* Image Styling */
+.course-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  /* opacity: 0.9; */
+  border-radius: 10px;
+}
+
+/* Overlay Styling */
+.Overlaylab {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  background: rgba(0, 153, 153, 0.6);
+  /* Semi-transparent background */
+  color: #F3E5AB;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 15px 30px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  /* Soft transparent border */
+  backdrop-filter: blur(8px);
+  /* Adds the blur effect */
+  -webkit-backdrop-filter: blur(8px);
+  /* For Safari support */
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.Overlaylab p {
+  margin: 3px;
+  padding: 0;
+  font-family: "Afacad Flux", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Hover Effects */
+.course-card:hover img {
+  transform: scale(1.1);
+  border-radius: 10px;
+}
+
+.course-card:hover .Overlaylab {
+  background: #F3E5AB;
+  /* Change background color */
+  color: #009999;
+  /* Change text color */
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.course-card h3 {
+  font-family: "Ubuntu", sans-serif;
+  color: #0077b5;
+  margin-top: 5px;
+}
+
+.course-card p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* Limits text to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Standard property (future compatibility) */
+  line-clamp: 3;
+  box-orient: vertical;
+}
+
+
+.date i {
+  color: #009999;
+}
+
+.date p {
+  font-size: 10px !important;
+  color: red;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  /* Allows buttons to wrap on smaller screens */
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #009999;
+  color: #F3E5AB;
+  cursor: pointer;
+  /* min-width: 10px;  */
+  max-width: 3%;
+  text-align: center;
+}
+
+.pagination button:hover,
+.pagination .active {
+  background-color: #F3E5AB;
+  color: #009999;
+}
+
+/* Tablet View (Max 768px) */
+@media (max-width: 768px) {
+  .pagination {
+    gap: 6px;
+  }
+
+  .pagination button {
+    padding: 6px 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* Mobile View (Max 480px) */
+@media (max-width: 480px) {
+  .pagination {
+    gap: 5px;
+  }
+
+  .pagination button {
+    padding: 5px 8px;
+    font-size: 12px;
+    min-width: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Mobile */
+  .course-grid {
+    grid-template-columns: repeat(1, 1fr);
+    /* 1 course per row */
+    max-width: 90%;
+    padding: 5px;
+  }
+
+  .course-card {
+    padding: 10px;
+  }
+
+  .image-container {
+    width: 100%;
+    /* Full width for mobile */
+    height: auto;
+  }
+
+  .course-card img {
+    height: 250px;
+    /* Adjusted for smaller screens */
+  }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+  font-family: "Ubuntu", sans-serif;
+
+}
+
+/* Modal Content */
+.modal-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+  font-family: "Ubuntu", sans-serif;
+  color: #009999;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 25px;
+  font-size: 42px;
+  cursor: pointer;
+  color: #ff4d4d;
+  transition: transform 0.2s;
+}
+
+.close-button:hover {
+  transform: rotate(180deg);
+}
+
+/* Form Grid */
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Section Styling */
+.personal,
+.depart {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #009999;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+
+}
+
+/* Floating Label */
+.section-label {
+  position: absolute;
+  top: -12px;
+  left: 15px;
+  background: #ffffff;
+  padding: 0 5px;
+  font-size: 18px;
+  color: #009999;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+
+}
+
+/* Grid for Inputs */
+.personal,
+.depart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* Input and Textarea Styling */
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 14px;
+  color: #666;
+  transition: 0.3s ease-in-out;
+  background: white;
+  padding: 0 5px;
+  pointer-events: none;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 90%;
+  padding: 20px 20px;
+  border: 2px solid #009999;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.modal-content input:focus+label,
+.modal-content input:not(:placeholder-shown)+label,
+.modal-content textarea:focus+label,
+.modal-content textarea:not(:placeholder-shown)+label {
+  top: -5px;
+  font-size: 16px;
+  color: #ff9900;
+  font-family: "Ubuntu", sans-serif;
+
+}
+
+/* Full Width Fields */
+textarea {
+  grid-column: span 3;
+  resize: none;
+  height: 80px;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  /* Aligns button to the right */
+  margin-top: 15px;
+}
+
+/* Submit Button */
+.modal-content button {
+  background: #009999;
+  color: #F3E5AB;
+  border: none;
+  padding: 12px;
+  width: 8%;
+  /* Set width to 30% */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+}
+
+.modal-content button:hover {
+  background: #F3E5AB;
+  color: #009999;
+}
+
+/* Error Styling */
+.error-border {
+  border: 2px solid red !important;
+}
+
+.valid-border {
+  border: 2px solid green !important;
+}
+
+/* Error Text */
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+/* Responsive Design */
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+    width: 95%;
+    padding: 15px;
+    overflow-y: auto;
+  }
+
+  .personal,
+  .depart {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .modal-content button {
+    width: 25%;
+    /* Adjust button size */
+  }
+
+  textarea {
+    grid-column: span 2;
+    /* Full width */
+  }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .modal-content {
+    max-height: 80vh;
+    /* Limits height to 80% of viewport */
+    overflow-y: auto;
+    /* Enables scrolling inside modal */
+  }
+
+  .modal-overlay {
+    overflow-y: auto;
+    /* Allows scrolling on mobile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* padding: 10px; */
+  }
+
+  .personal,
+  .depart {
+    grid-template-columns: 1fr;
+    /* Single column */
+    gap: 8px;
+    padding: 15px;
+  }
+
+  .input-group label {
+    font-size: 13px;
+    /* Smaller labels */
+    top: 8px;
+    left: 10px;
+  }
+
+  .modal-content input,
+  .modal-content textarea {
+    width: 90%;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .modal-content button {
+    width: 50%;
+    /* Full width for smaller screens */
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .close-button {
+    font-size: 36px;
+    /* Smaller close button */
+    top: 8px;
+    right: 15px;
+  }
+
+  textarea {
+    grid-column: span 1;
+    /* Full width */
+    height: 60px;
+  }
+}

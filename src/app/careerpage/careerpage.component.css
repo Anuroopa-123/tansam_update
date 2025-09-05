@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 90%;
+    padding: 13px 10px;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/headerimage/tansambg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1;
+}
+.title h2 {
+    font-family: "Ubuntu", sans-serif;
+    color: #009999;
+    font-size: 30px;
+}
+
+.title p {
+    font-family: "Poppins", sans-serif;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: #858585;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.title1{
+    text-align: center;
+}
+
+.title1 h3{
+    font-family: "Ubuntu", sans-serif;
+    /* color: #009999; */
+    color: #989898;
+    font-size: 20px;
+}
+/* 
+Career card style START
+*/
+.careercard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 70%; /* Adjusted to take more width */
+    margin: 0 auto;
+}
+
+.job-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* transition: transform 0.3s ease; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 2px solid transparent; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.job-card:hover {
+    /* transform: translateY(-5px); */
+    border-color: #009999;
+    box-shadow: 0 4px 15px rgba(0, 153, 153, 0.3); /* Adds a subtle glow effect */
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+.job-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Truncate description to 3 lines with ellipsis */
+.job-description {
+    font-size: 16px;
+    color: #666;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    line-clamp: 3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Job footer - Flex between left & right */
+.job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Pushes footer to the bottom */
+    padding-top: 10px; /* Adds spacing */
+}
+
+.job-footer span{
+    font-family: "Ubuntu", sans-serif;
+    color: green;
+}
+
+/* Job type (left side) */
+.job-type {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Job icon (right side, only visible on hover) */
+.job-icon {
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.job-card:hover .job-icon {
+    opacity: 1;
+}
+
+.titledate h3{
+    font-family: "Afacad Flux", sans-serif;
+    color: #009999;
+    font-size: 25px;
+    margin: 0;
+}
+
+.titledate p{
+    font-family: "Poppins", sans-serif;
+    color: #989898;
+}
+
+.titledate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 
+Career card style END
+*/
+
+/* 
+Pagination START
+*/
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button.active {
+    background-color: #28a745;
+    font-weight: bold;
+}
+
+/* 
+Pagination END
+*/

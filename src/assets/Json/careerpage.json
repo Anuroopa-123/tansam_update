@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "role": "Software Engineer",
+    "description": "Develop and maintain web applications. Analyze business data and generate reports.",
+    "type": "Full-Time",
+    "postedOn": "2025-03-06"
+  },
+  {
+    "id": 2,
+    "role": "Data Analyst",
+    "description": "Analyze business data and generate reports. Develop and maintain web applications.",
+    "type": "Contract",
+    "postedOn": "2025-03-05"
+  },
+  {
+    "id": 3,
+    "role": "UI/UX Designer",
+    "description": "Design user-friendly interfaces and experiences. Develop and maintain web applications.",
+    "type": "Part-Time",
+    "postedOn": "2025-03-04"
+  }
+]

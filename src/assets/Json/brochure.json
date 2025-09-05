@@ -1,0 +1,15 @@
+{
+    "brochures": [
+      {
+        "title": "TANSAM Information Brochure",
+        "image": "assets/pdf/tambimage/bro1.png",
+        "pdfUrl": "assets/pdf/Tansam Information Brochure 1.pdf"
+      },
+      {
+        "title": "Industry 4.0 Brochure",
+        "image": "assets/pdf/tambimage/bro3.png",
+        "pdfUrl": "assets/pdf/TANSAM_Brochure.pdf"
+      }
+    ]
+  }
+  

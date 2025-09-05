@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Basic styles for the navigation */
+.navbar {
+  /* background-image: url("/assets/headerimage/tansambg.png"); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat;
+  background-position: center; */
+  background-color: #063774;
+  /* color: white; */
+  padding: 10px;
+  font-family: "Rubik", serif;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  gap: 26px;
+}
+
+.nav-list li {
+  /* margin-right: 15px;  */
+  position: relative;
+  color: white;
+  font-weight: 750;
+  padding: 5px 10px;
+}
+
+.nav-list a{
+  text-decoration: none;
+  /* color: #063774; */
+  color: white;
+  font-weight: 750;
+  padding: 5px 10px;
+}
+
+.nav-list a .span {
+  /* color: #0a5296; */
+  color: white;
+  text-decoration: none;
+  font-size: 16px; /* Reduced font size */
+  font-weight: 600;
+  padding: 8px 12px; /* Reduced padding for smaller space around text */
+  display: flex;
+  align-items: center; /* Aligns the icon and text vertically */
+}
+
+.dropdown {
+  z-index: 10;
+  position: relative;
+}
+
+/* General line animation for top-level nav items */
+.nav-list > li:not(.dropdown)::after {
+  content: '';
+  display: block;
+  height: 2px; /* Thickness of the line */
+  background-color: #063774 !important; /* Line color */
+  width: 0; /* Start with 0 width */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+/* Hover state for top-level nav items */
+.nav-list > li:not(.dropdown):hover::after {
+  width: 100%; /* Full width of the text */
+}
+
+/* Ensure dropdown menu items do not inherit the line animation */
+.dropdown-menu li::after {
+  content: none; /* Remove any pseudo-elements */
+}
+
+/* Ensure hover effects for dropdown menu items are not affected */
+.dropdown-menu li:hover::after {
+  width: 0; /* No hover animation */
+}
+
+/* Line animation for span inside dropdown */
+.dropdown > span::after {
+  content: '';
+  display: block;
+  height: 2px; /* Thickness of the line */
+  background-color: #063774; /* Line color */
+  width: 0; /* Start with 0 width */
+  transition: width 0.3s ease; /* Smooth animation */
+  margin-top: 2px; /* Adds spacing between the text and the line */
+}
+
+/* Hover state for span inside dropdown */
+.dropdown > span:hover::after {
+  width: 100%; /* Full width of the span text */
+}
+
+
+/* Dropdown container specific styles */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: whitesmoke;
+  list-style-type: none;
+  margin: 0;
+  padding: 2px;
+  display: none;
+  z-index: 1;
+  min-width: 400px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+
+/* Show dropdown when hovering over the li */
+.dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Dropdown menu item styles */
+.dropdown-menu li {
+  padding: 5px 8px; /* Reduced padding for smaller space inside the dropdown */
+}
+
+.dropdown-menu li a {
+  color: #0a5296 !important;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+/* Dropdown Menu Base Style */
+.dropdown-menu li a {
+  position: relative;
+  display: inline-flex;
+  align-items: center; /* Align text and icon properly */
+  transition: color 0.3s ease;
+}
+
+/* Icon Styling Before Text */
+.dropdown-menu li a::before {
+  content: '\f101'; /* Unicode for Font Awesome icon */
+  font-family: 'Font Awesome 5 Free'; /* Ensure the font-family is correctly applied */
+  font-weight: 900; /* Use the solid version of the font */
+  margin-right: 8px; /* Spacing between icon and text */
+  opacity: 1; /* Icon is always visible */
+  position: relative;
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+/* Hover Effect */
+.dropdown-menu li a:hover {
+  color: #059A9A !important; /* Change text color on hover */
+  transform: translateX(10px); /* Slide the entire anchor tag */
+}
+
+/* Keyframes for Sliding Icon and Text Together */
+.dropdown-menu li a:hover::before {
+  animation: slide-animation 0.5s ease-in-out; /* Apply sliding animation */
+}
+
+/* Keyframes for Sliding Animation */
+@keyframes slide-animation {
+  0% {
+      transform: translateX(0); /* Initial position */
+  }
+  50% {
+      transform: translateX(10px); /* Slide to the right */
+  }
+  100% {
+      transform: translateX(0); /* Back to original position */
+  }
+}
+
+
+
+/* Styling for the chevron icon */
+.fa-chevron-down,
+.fa-chevron-up {
+  margin-left: 0px; /* Reduced space between icon and text */
+  font-size: 10px; /* Reduced icon size */
+  transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+/* Rotate the chevron when dropdown is open */
+.dropdown:hover .fa-chevron-down {
+  transform: rotate(180deg); /* Rotate 180 degrees on hover */
+}
+
+.hamburger{
+display: none;
+}
+/* Base Styles - No Change to Existing Desktop Styles */
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+.nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-list li {
+    width: 90%;
+    text-align: start;
+    padding-left: 30px;
+}
+
+.dropdown-menu {
+    position: static;
+    width: 100%;
+    min-width: unset;
+    display: none;
+    background-color: #063774;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: none;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a{
+  color: white !important;
+}
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+.navbar {
+    position: relative;
+    padding: 10px;
+}
+
+.nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #063774;
+    position: absolute;
+    /* top: 60px; */
+    left: 0;
+    padding: 10px 0;
+}
+
+.nav-list.active {
+    display: flex;
+    z-index: 99;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  /* position: absolute; */
+  top: 15px;
+  right: 20px;
+  z-index: 100;
+  text-align: end;
+}
+
+/* Change color when menu is open (for ✖) */
+.hamburger.close-icon {
+color: red !important; /* Red color for ✖ */
+}
+
+.dropdown-menu {
+    display: none;
+    text-align: center;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+}

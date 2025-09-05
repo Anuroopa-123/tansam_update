@@ -1,0 +1,68 @@
+{
+  "title": "Our Software & Mobile App Development Services",
+  "services": [
+    {
+      "category": "Software Development",
+      "items": [
+        {
+          "name": "📊 CMS (Content Management System)",
+          "description": "Custom-built CMS solutions for businesses to manage their content efficiently.",
+          "image": "assets/digitaltech/CMS1.jpg",
+          "hoverImage": "assets/digitaltech/CMS2.jpg"
+        },
+        {
+          "name": "📂 PMS (Project Management System)",
+          "description": "Scalable PMS to streamline project tracking, collaboration, and reporting.",
+          "image": "assets/digitaltech/file1.jpg",
+          "hoverImage": "assets/digitaltech/file2.jpg"
+        },
+        {
+          "name": "🏢 BMS (Business Management System)",
+          "description": "Automate business processes with our feature-rich BMS.",
+          "image": "assets/digitaltech/BMS1.jpg",
+          "hoverImage": "assets/digitaltech/BMS2.jpg"
+        },
+        {
+          "name": "🛒 E-Commerce & Mobile Applications",
+          "description": "We develop fast, scalable, and secure e-commerce solutions for both Android & iOS.",
+          "image": "assets/digitaltech/Ecommerce1.jpg",
+          "hoverImage": "assets/digitaltech/Ecommerce2.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Mobile Application Development",
+      "items": [
+        {
+          "name": "⚡ Native & Hybrid App Development",
+          "description": "We build high-performance apps using Flutter, React Native, Swift, and Kotlin.",
+          "image": "assets/digitaltech/NativeApp1.jpg",
+          "hoverImage": "assets/digitaltech/NativeApp2.jpg"
+        },
+        {
+          "name": "🔒 Secure Payment Integration",
+          "description": "Integrating UPI, Stripe, PayPal, and other payment gateways for seamless transactions.",
+          "image": "assets/digitaltech/Payment1.jpg",
+          "hoverImage": "assets/digitaltech/Payment2.jpg"
+        },
+        {
+          "name": "📡 Real-time Data & Tracking",
+          "description": "Live tracking and instant data synchronization for optimal user experience.",
+          "image": "assets/digitaltech/Tracking1.jpg",
+          "hoverImage": "assets/digitaltech/Tracking2.jpg"
+        },
+        {
+          "name": "🛍️ AI-Powered E-Commerce Apps",
+          "description": "AI-driven product recommendations and smart analytics for better sales.",
+          "image": "assets/digitaltech/AiEcommerce1.jpg",
+          "hoverImage": "assets/digitaltech/AiEcommerce2.jpg"
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "title": "🚀 Ready to Build Your Next Project?",
+    "description": "Contact us today for a free consultation and let's create something amazing together!",
+    "link": "/contact"
+  }
+}

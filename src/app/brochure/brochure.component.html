@@ -1,0 +1,11 @@
+<div class="title">
+    <h3>Brochure</h3>
+</div>
+<div class="brochure-container">
+    <div class="brochure-card" *ngFor="let brochure of brochures">
+        <img [src]="brochure.image" [alt]="brochure.title" class="brochure-thumbnail">
+        <h3 class="brochure-title">{{ brochure.title }}</h3>
+        <button (click)="openPdf(brochure.pdfUrl)" class="open-btn">Open</button>
+    </div>
+</div>
+  

@@ -1,0 +1,44 @@
+[
+    {
+      "key": "Innovative_Manufacturing",
+      "title": "Innovative Manufacturing",
+      "description": "Product Innovation is the process of conceiving, developing, and introducing new or improved products to the market. It's about reimagining the way things work and creating solutions that captivate and inspire.",
+      "src": "assets/bannerimage/Innovativemanu.png"
+    },
+    {
+      "key": "Smart_Factory_Center",
+      "title": "Smart Factory Center",
+      "description": "Innovative Manufacturing is the art of redefining traditional production processes by integrating cutting-edge technologies and creative solutions. It's about pushing the boundaries of what's possible.",
+      "src": "assets/bannerimage/smartfactory.jpg"
+    },
+    {
+      "key": "AR|VR|MR_Research_Centre",
+      "title": "AR | VR | MR Research Centre",
+      "description": "Reverse engineering, sometimes called back engineering, is a process in which, Machines, aircraft, architectural structures and other products are deconstructed to extract design information from them.",
+      "src": "assets/bannerimage/vr3.png"
+    },
+    {
+      "key": "PLM",
+      "title": "Research Centre For PLM",
+      "description": "A digital twin is a digital representation of a physical object, person, or process, contextualized in a digital version of its environment. Digital twins can help an organization simulate real situations and their outcomes, ultimately allowing it to make better decisions.",
+      "src": "assets/bannerimage/PLM.jpg"
+    },
+    {
+      "key": "Asset_Performance",
+      "title": "Research Centre For Asset Performance ",
+      "description": "real-time data insights to optimize various aspects of business operations. By continuously monitoring equipment performance, analyzing production processes, and tracking key performance indicators, streamline workflows, and minimize downtime.",
+      "src":"assets/bannerimage/assetperformance.jpg"
+    },
+    {
+      "key": "Product_Innovation_Center",
+      "title": "Product Innovation Center",
+      "description": "Software plays a crucial role in digital technology, encompassing a wide range of programs and applications that run on computing devices. This includes operating systems like Windows, macOS as well as productivity software, multimedia applications, games, web browsers, and more.",
+      "src": "assets/bannerimage/product.jpg"
+    },
+    {
+        "key": "Predictive_Engineering",
+        "title": "Predictive Engineering",
+        "description": "where innovation meets reality through the power of immersive technologies. With our cutting-edge expertise in Virtual Reality (VR) and Augmented Reality (AR), we have redefined the landscape of various industries.",
+        "src": "assets/bannerimage/predictive_engineering.jpg"
+    }
+  ]

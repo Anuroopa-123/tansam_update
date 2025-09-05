@@ -1,0 +1,12 @@
+<section class="clientsec">
+    <div class="clients">
+        <h2>Our Clients</h2>
+    </div>
+
+    <div class="logo-slider">
+        <div class="logos-slide">
+            <img *ngFor="let partner of partners" [src]="partner.src" [alt]="partner.alt" [title]="partner.alt"
+                (click)="openInNewTab(partner.link)">
+        </div>
+    </div>
+</section>

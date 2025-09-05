@@ -1,0 +1,81 @@
+
+
+<nav class="navbar">
+<!-- Hamburger Menu (Toggles Open/Close) -->
+<div class="hamburger" (click)="toggleMenu()" [ngClass]="{ 'close-icon': isMenuOpen }">
+  {{ isMenuOpen ? '✖' : '☰' }}
+</div>
+
+  <ul class="nav-list" [ngClass]="{ 'active': isMenuOpen }">
+    <li class="active"><a href="#">Home</a></li>
+    <li class="active"><a [routerLink]="['/aboutus']" routerLinkActive="active">About Us</a></li>
+
+    <!-- LABS Dropdown -->
+    <li class="dropdown"  [ngClass]="{ 'active': isDropdownOpen['services'] }" (click)="toggleDropdown('services')">
+      <span class="active">
+       Our Labs
+        <i class="fa-solid"
+          [ngClass]="{ 'fa-chevron-down': !isDropdownOpen['services'], 'fa-chevron-up': isDropdownOpen['services'] }"></i>
+      </span>
+
+      <ul class="dropdown-menu" *ngIf="isDropdownOpen['services']">
+        <li *ngFor="let lab of labs">
+          <a [routerLink]="['/labs', lab.key]">{{ lab.title }}</a>
+        </li>
+      </ul>
+
+
+
+    </li>
+
+    <!-- Projects Dropdown -->
+    <li class="dropdown"  [ngClass]="{ 'active': isDropdownOpen['projects'] }" (click)="toggleDropdown('projects')">
+      <span class="active">
+        Projects
+        <i class="fa-solid"
+          [ngClass]="{ 'fa-chevron-down': !isDropdownOpen['projects'], 'fa-chevron-up': isDropdownOpen['projects'] }"></i>
+      </span>
+      <ul class="dropdown-menu" *ngIf="isDropdownOpen['projects']">
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Industries</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Spoke Centres</a></li>
+        <li><a href="#">Naan Mudhalvan</a></li>
+      </ul>
+    </li>
+
+    <!-- Naan Mudhalvan Dropdown -->
+    <li class="dropdown" [ngClass]="{ 'active': isDropdownOpen['naanmudhalvan'] }" (click)="toggleDropdown('naanmudhalvan')">
+      <span class="active">
+        Naan Mudhalvan
+        <i class="fa-solid"
+          [ngClass]="{ 'fa-chevron-down': !isDropdownOpen['naanmudhalvan'], 'fa-chevron-up': isDropdownOpen['naanmudhalvan'] }"></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li><a href="#">Upskilling Courses</a></li>
+        <li><a href="#">Faculty Development</a></li>
+      </ul>
+    </li>
+
+    <li class="active"><a href="#">Industries</a></li>
+
+    <!-- Media Dropdown -->
+    <li class="dropdown"  [ngClass]="{ 'active': isDropdownOpen['media'] }" (click)="toggleDropdown('media')">
+      <span class="active">
+        Media
+        <i class="fa-solid"
+          [ngClass]="{ 'fa-chevron-down': !isDropdownOpen['media'], 'fa-chevron-up': isDropdownOpen['media'] }"></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Newspaper</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </li>
+
+    <li class="active"><a href="#">Brochures</a></li>
+    <li class="active"><a href="#">Contact</a></li>
+  </ul>
+</nav>

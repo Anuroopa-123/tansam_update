@@ -1,0 +1,28 @@
+<section class="labs-container">
+  <h2 class="section-title">{{ selectedLab?.title }}</h2>
+  <p class="lab-description">{{ selectedLab?.description }}</p>
+
+  <div *ngIf="selectedLab" class="image-text-container">
+    <div
+      class="image-text-pair"
+      *ngFor="let item of selectedLab.content; let i = index"
+      [ngClass]="{ active: i === selectedIndex, reverse: i % 2 !== 0 }"
+    >
+      <!-- Left Side Text -->
+      <div class="text-content">
+        <h2>{{ item.imagetitle }}</h2>
+        <p
+          class="image-text"
+          [innerHTML]="formatText(item.text)"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+        ></p>
+      </div>
+
+      <!-- Right Side Image -->
+      <div class="image-content">
+        <img [src]="item.image" [alt]="selectedLab.title" class="lab-image" />
+      </div>
+    </div>
+  </div>
+</section>

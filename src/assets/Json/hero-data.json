@@ -1,0 +1,61 @@
+{
+  "images": [
+    {
+      "src": "assets/bannerimage/CM1.jpg",
+      "alt": "Image 1",
+      "title": "Honorable Chief Minister, Thiru.M.K.Stalin Inaugurated the TANSAM",
+      "caption": ""
+    },
+    {
+      "src": "assets/bannerimage/explain.jpg",
+      "alt": "Image 2",
+      "title": "Knowledge Sharing by TANSAM Team",
+      "caption": ""
+    },
+    {
+      "src": "assets/bannerimage/IMG_3645.jpg",
+      "alt": "Image 2",
+      "title": "",
+      "caption": ""
+    },
+    {
+      "src": "assets/bannerimage/IMG_5672.jpg",
+      "alt": "Image 2",
+      "title": "Memorandum of Understanding signing",
+      "caption": ""
+    },
+    {
+      "src": "assets/bannerimage/IMG_6861.jpg",
+      "alt": "Image 2",
+      "title": "",
+      "caption": ""
+    }
+
+  ],
+  "latestNews": [
+    {
+      "image": "assets/bannerimage/20250124_164232.jpg",
+      "title": "Visit By - FORD ",
+      "date": "31/01/2025",
+      "description": " "
+    },
+    {
+      "image": "assets/mainimage/IMG_3575.JPG",
+      "title": "Siemens managers visit TANSAM.",
+      "date": "10/08/2024",
+      "description": " "
+    },
+    {
+      "image": "assets/mainimage/IMG_3574.JPG",
+      "title": "TANSAM MD discussing with Siemens members",
+      "date": "27/07/2024",
+      "description": " "
+    },
+    {
+      "image": "assets/mainimage/pondy.jpeg",
+      "title": "Shri K. Lakshminarayanan, the Hon'ble Minister for Public Works in Puducherry, Visited the TANSAM center.",
+      "date": "25/02/2025",
+      "description": " "
+    }
+  ]
+}

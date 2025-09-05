@@ -1,0 +1,76 @@
+<section class="top_title">
+  <div class="card">
+    <p>
+      <span class="highlight">TANSAM</span> is a government initiative
+      supporting educational institutions, industries, MSMEs, start-ups, and
+      OEMs. It aims to educate students and professionals on
+      <strong>Industry 4.0</strong> technologies, providing hands-on experience
+      with industrial hardware and software.
+    </p>
+    <p>
+      Using the aforementioned seven Centers, TANSAM provides solutions to all
+      industries across India. TANSAM is providing services in the
+      aforementioned seven centers to all Start -up’s, MSME’s, SME’s,
+      Industries, and OEM’s. Also, we are assisting students, employees, start –
+      up’s, MSME’s in learning the skills necessary in their industry and
+      provide them with practical experience with all industrial hardware and
+      software. The aforementioned seven areas will assist in turning an idea
+      into a functioning product.
+    </p>
+  </div>
+
+  <div class="card-list-container">
+    <div class="card">
+      <h2>Services We Provide</h2>
+      <ul class="services-list">
+        <li>Industry solutions using our 7 specialized centers</li>
+        <li>Practical skill development aligned with industrial needs</li>
+        <li>Access to modern software and hardware</li>
+        <li>Support in turning ideas into functional products</li>
+        <li>Hands-on training and real-world use cases</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- Tabs Section -->
+<div class="tabs-container">
+  <button
+    *ngFor="let lab of labs; let i = index"
+    (click)="selectLab(i)"
+    [class.active-tab]="i === selectedLabIndex"
+    class="lab-tab"
+  >
+    {{ lab.title }}
+  </button>
+</div>
+
+<section class="lab-section">
+  <div class="lab-container">
+    <div class="lab-slider-container" *ngIf="selectedLab && currentItem">
+      <div class="lab-title">
+        <h2>{{ currentItem.title }}</h2>
+      </div>
+
+      <div class="lab-slide">
+        <div class="lab-image" data-aos="fade-right" data-aos-duration="1000">
+          <button class="nav-arrow left-arrow" (click)="prevSlide()">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <img [src]="currentItem.image" [alt]="currentItem.title" />
+        </div>
+
+        <div class="lab-details" data-aos="fade-left" data-aos-duration="1000">
+          <p>{{ currentItem.description }}</p>
+          <button class="nav-arrow right-arrow" (click)="nextSlide()">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="software" *ngIf="currentItem.software">
+        <p><strong>Software Used :</strong> {{ currentItem.software }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Centered Slide Title -->

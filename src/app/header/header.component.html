@@ -1,0 +1,340 @@
+<div class="header" id="header">
+
+  <div class="topline">
+
+    <div class="socialmedia">
+      <a
+        href="https://www.facebook.com/people/TANSAM-Powered-by-Siemens/61556964369639/#"
+        target="_blank"
+        class="facebook"
+      >
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://x.com/TANSAM2022" target="_blank" class="twitter">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/tansamcoe_2022"
+        target="_blank"
+        class="instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/tansam/"
+        target="_blank"
+        class="linkedin"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+ <!-- <p class="notification-text">
+            <i class="fa-solid fa-bell fa-shake"></i> TANSAM is offering a new
+            internship !!!
+          </p> -->
+            <!-- <span class="default-notification">New Notification</span> -->
+  <div class="scrollingnotif">
+    <!-- <div class="notification-frame">
+
+
+      <div class="scrolling-content">
+        <a class="notification-link" href="https://tansam.org">
+
+        </a>
+      </div>
+    </div> -->
+  </div>
+  <div class="topright-container">
+    <div class="topright">
+      <a [routerLink]="">Contact</a>
+    </div>
+    <div class="topright">
+      <a [routerLink]="['GCC']">GCC</a>
+    </div>
+    <div class="topright">
+      <a [routerLink]="['career']">Career</a>
+    </div>
+
+
+    <div class="topright">
+      <a [routerLink]="['internship_Reg']">Internship</a>
+    </div>
+
+  </div>
+
+  <div class="rightside">
+    <a href="/sitemap"><i class="fa-solid fa-sitemap"></i> SITE Map </a>
+  </div>
+</div>
+
+
+<!-- Logo section -->
+<!-- Logo section -->
+<section class="header-container logosection">
+  <!-- Left Logos -->
+  <div class="logo-left">
+    <img src="assets/headerimage/tansamoldlogo.png" alt="TANSAM Logo" />
+    <img src="assets/headerimage/tnlogo.png" alt="TN Logo" />
+  </div>
+
+  <!-- Center Title -->
+  <div class="header-title">
+    <h1 class="main-title">Tamil Nadu Smart and Advanced Manufacturing</h1>
+    <div class="subtitle">Center of Excellence</div>
+  </div>
+
+  <!-- Right Logos -->
+  <div class="logo-right">
+    <img src="assets/headerimage/tidcologo.png" alt="TIDCO Logo" />
+    <img src="assets/headerimage/siemens.png" alt="Siemens Logo" />
+  </div>
+</section>
+
+
+
+<!-- Navigation start here -->
+<nav class="navbar" [ngClass]="{ sticky: isScrolled }">
+  <!-- Hamburger Menu (Toggles Open/Close) -->
+  <div
+    class="hamburger"
+    (click)="toggleMenu()"
+    [ngClass]="{ 'close-icon': isMenuOpen }"
+  >
+    {{ isMenuOpen ? "✖" : "☰" }}
+  </div>
+
+  <ul class="nav-list" [ngClass]="{ active: isMenuOpen }">
+    <li class="active"><a href="#">Home</a></li>
+    <li class="active">
+      <a [routerLink]="['/aboutus']" routerLinkActive="active">About Us</a>
+    </li>
+
+    <!-- Technical Capabilities -->
+    <!-- <li class="dropdown" [ngClass]="{ 'active': isDropdownOpen['Technical_capability'] }"
+      (click)="toggleDropdown('Technical_capability')">
+      <span class="active">
+        Technical Capabilities
+        <i
+          class="fa-solid"
+          [ngClass]="{
+            'fa-chevron-down': !isDropdownOpen['Technical_capability'],
+            'fa-chevron-up': isDropdownOpen['Technical_capability']
+          }"
+        ></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li><i class="fa-solid fa-angles-right"></i><a [routerLink]="['']">Under_develop</a></li>
+        <li><i class="fa-solid fa-angles-right"></i><a [routerLink]="['Naan_mudhalvan/faculty_development/']">
+          Under_develop</a></li>
+      </ul>
+    </li> -->
+
+    <!-- LABS Dropdown -->
+    <li
+    class="dropdown"
+    [ngClass]="{ active: isDropdownOpen['labs'] }"
+    (click)="toggleDropdown('labs')"
+  >
+    <span class="active">
+      Our Research Labs
+      <i
+        class="fa-solid"
+        [ngClass]="{
+          'fa-chevron-down': !isDropdownOpen['labs'],
+          'fa-chevron-up': isDropdownOpen['labs']
+        }"
+      ></i>
+    </span>
+    <ul class="dropdown-menu">
+      <li>
+        <a [routerLink]="['/labs/Innovative_Manufacturing']">Innovative Manufacturing</a>
+      </li>
+      <li>
+        <a [routerLink]="['/labs/Smart_Factory_Center']">Smart Factory Center</a>
+      </li>
+      <li>
+        <a [routerLink]="['/labs/AR_VR_MR_Research_Centre']">AR | VR | MR Research Centre</a>
+      </li>
+      <li>
+        <a [routerLink]="['/labs/Research_Centre_For_PLM']">Research Centre for PLM</a>
+      </li>
+      <li>
+        <a [routerLink]="['/labs/Research_Centre_For_Asset_Performance']">Research Centre for Asset Performance</a>
+      </li>
+      <li>
+        <a [routerLink]="['/labs/Product_Innovation_Center']">Product Innovation Center</a>
+      </li>
+      <li>
+        <a [routerLink]="['/labs/Predictive_Engineering']">Predictive Engineering</a>
+      </li>
+    </ul>
+  </li>
+
+    <!-- <li
+      class="dropdown"
+      [ngClass]="{ active: isDropdownOpen['services'] }"
+      (click)="toggleDropdown('services')"
+    >
+      <span class="active">
+        Labs
+        <i
+          class="fa-solid"
+          [ngClass]="{
+            'fa-chevron-down': !isDropdownOpen['services'],
+            'fa-chevron-up': isDropdownOpen['services']
+          }"
+        ></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li *ngFor="let lab of labs">
+          <i class="fa-solid fa-angles-right"></i>
+          <a [routerLink]="['/labs', lab.key]">{{ lab.title }}</a>
+        </li>
+      </ul>
+    </li> -->
+
+    <!-- Technical Capabilities -->
+    <!-- <li class="dropdown" [ngClass]="{ 'active': isDropdownOpen['Project'] }"
+        (click)="toggleDropdown('Project')">
+        <span class="active">
+          Project
+          <i class="fa-solid"
+            [ngClass]="{ 'fa-chevron-down': !isDropdownOpen['Project'], 'fa-chevron-up': isDropdownOpen['Project'] }"></i>
+        </span>
+        <ul class="dropdown-menu">
+          <li><i class="fa-solid fa-angles-right"></i><a [routerLink]="['']">Under_develop</a></li>
+          <li><i class="fa-solid fa-angles-right"></i><a [routerLink]="['Naan_mudhalvan/faculty_development/']">
+            Under_develop</a></li>
+        </ul>
+      </li> -->
+
+    <!-- Naan Mudhalvan Dropdown -->
+    <li
+      class="dropdown"
+      [ngClass]="{ active: isDropdownOpen['naanmudhalvan'] }"
+      (click)="toggleDropdown('naanmudhalvan')"
+    >
+      <span class="active">
+        Skilling Programs
+        <i
+          class="fa-solid"
+          [ngClass]="{
+            'fa-chevron-down': !isDropdownOpen['naanmudhalvan'],
+            'fa-chevron-up': isDropdownOpen['naanmudhalvan']
+          }"
+        ></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li>
+          <!-- <i class="fa-solid fa-angles-right"></i -->
+            <a [routerLink]="['Naan_mudhlvan/up_skilling']">Naan Mudhalvan</a>
+
+        </li>
+        <!-- <li><i class="fa-solid fa-angles-right"></i><a [routerLink]="['']">Other Initiative</a></li> -->
+      </ul>
+    </li>
+
+    <!-- Media Dropdown -->
+    <li
+      class="dropdown"
+      [ngClass]="{ active: isDropdownOpen['media'] }"
+      (click)="toggleDropdown('media')"
+    >
+      <span class="active">
+        Our Strength
+        <i
+          class="fa-solid"
+          [ngClass]="{
+            'fa-chevron-down': !isDropdownOpen['media'],
+            'fa-chevron-up': isDropdownOpen['media']
+          }"
+        ></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li *ngFor="let media of mediaItems">
+          <!-- <i class="fa-solid fa-angles-right"></i> -->
+          <!-- <a
+            [routerLink]="
+              media.name === 'Print_Media'
+                ? ['/media', media.name]
+                : media.name === 'Events'
+                ? ['/events']
+                : media.name === 'Linkedin'
+                ? ['/TANSAM/LinkedIN']
+                : ['/']
+            "
+            >{{ media.name }}</a
+          > -->
+          <!-- <a [routerLink]="['/media', media.id]">
+            {{ media.name.replace("_", " ") }}
+          </a> -->
+          <a
+            [routerLink]="
+              media.name === 'Events'
+                ? ['/events']
+                : media.name === 'Linkedin'
+                ? ['/TANSAM/LinkedIN']
+                : ['/media', media.id]
+            "
+          >
+            {{ media.name.replace("_", " ") }}
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="active"><a [routerLink]="['Brochure']">Digital Transformation</a></li>
+    <!-- <li class="active"><a [routerLink]="['']">Achievement</a></li> -->
+    <li class="active"><a [routerLink]="">Latest News</a></li>
+    <!-- <li class="active"><a [routerLink]="">More</a></li> -->
+  </ul>
+</nav>
+
+<!-- Navigation end here -->
+
+<!-- Full Screen Dull Overlay -->
+<div class="dull-overlay" id="dullOverlay"></div>
+
+<!-- Right side overlay panel -->
+<div class="overlay-panel hidden" id="overlayPanel">
+  <div class="panel-content">
+    <img src="/assets/mainpageimage/tansamlogo.png" />
+    <p>
+      Tamil Nadu Industrial Development Corporation (TIDCO) to establish The
+      Tamil Nadu Smart and Advanced Manufacturing Centre (TANSAM) at the TIDEL
+      Park, Chennai.
+    </p>
+  </div>
+
+  <div class="panel-content2">
+    <h3>Contact US</h3>
+
+    <!-- Contact Details -->
+    <div class="contact-details">
+      <div class="detail">
+        <i class="fa-solid fa-envelope"></i>
+        <p>
+          <a href="mailto:contact&#64;tansam.org">contact&#64;tansam.org</a> |
+          <a href="mailto:nateshc&#64;tansam.org">nateshc&#64;tansam.org</a>
+        </p>
+      </div>
+      <div class="detail">
+        <i class="fa-solid fa-phone"></i>
+        <p>+91 96000 91359 | 98840 35145</p>
+      </div>
+      <div class="detail">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>
+          TIDEL Park, Rajiv Gandhi IT Expy, Tharamani, Chennai, Tamil Nadu
+          600113
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Right side frame toggle -->
+<!-- <div class="rightsideframe" id="rightsideframe" (click)="togglePanelVisibility()">
+  <i id="toggleIcon" class="fa-solid fa-angles-right"></i>
+</div> -->
+

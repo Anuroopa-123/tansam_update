@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full-width container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #009999;
+  margin-bottom: 10px;
+  font-family: "Afacad Flux", serif;
+  /* background: url('/assets/bg/gcc_bg.jpg') no-repeat center center;
+  background-size: 50% 90px; */
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Description */
+.description {
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20px;
+  font-family: "Ubuntu", serif;
+  position: relative;
+  background: none;
+  padding: 20px;
+}
+
+/* Pseudo-element for background image */
+/* .description::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 390px;
+  background: url('/assets/bg/desc_bg.png') no-repeat top right;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: -1;
+} */
+
+/* Tabs & Content Wrapper */
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Tabs Navigation */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.tab {
+  background: transparent;
+  border: 2px solid #F3E5AB;
+  padding: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+  font-weight: bold;
+  color: #009999;
+}
+
+.tab:hover,
+.tab.active {
+  background: #009999;
+  color: #F3E5AB;
+}
+
+/* Tab Content */
+.tab-content {
+  flex: 1;
+  min-height: 150px;
+  padding: 15px;
+  border-left: 1px solid #F3E5AB;
+  font-size: 16px;
+  color: #333;
+}
+
+.tab-content p{
+  font-size: 19px;
+  font-family: 'Poppins', sans-serif;
+}
+/* Table */
+.table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.table th {
+  background: #009999;
+  color: #F3E5AB;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.table tr:hover {
+  background: #f1f1f1;
+}
+
+.why-choose {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #009999;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "Afacad Flux", serif;
+}
+
+.benefits-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.benefits-list li {
+  font-size: 18px;
+  color: #555;
+  padding: 10px 0;
+  border-left: 4px solid #009999;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Industries & Connect Section */
+.industries-connect {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 30px auto;
+  width: 65%;
+}
+
+.industries, .connect {
+  flex: 1;
+}
+
+.industries h2, .connect h2 {
+  font-size: 24px;
+  color: #009999;
+  margin-bottom: 10px;
+  font-family: "Afacad Flux", serif;
+}
+
+.industries ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.industries ul li {
+  font-size: 18px;
+  color: #555;
+  padding: 5px 0;
+  border-left: 4px solid #009999;
+  font-family: "Poppins", sans-serif;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.industries ul li:hover {
+  transform: translateX(10px); /* Moves 5px to the right on hover */
+  color: #009999;
+}
+
+.connect p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Contact Us Card */
+.contact-card {
+  background: #f8f9fa;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-card h2 {
+  font-size: 24px;
+  color: #009999;
+  margin-bottom: 10px;
+  font-family: "Afacad Flux", serif;
+}
+
+.contact-card p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-card a {
+  color: #009999;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-card a:hover {
+  color: #0056b3;
+}
+
+.contact-card strong{
+  color: #0056b3;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .industries-connect {
+    flex-direction: column;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .tabs {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .tab {
+    flex: 1;
+    text-align: center;
+  }
+
+  .tab-content {
+    width: 100%;
+    border-left: none;
+    border-top: 3px solid #007bff;
+  }
+}

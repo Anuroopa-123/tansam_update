@@ -1,0 +1,140 @@
+{
+    "headers": [
+      "SL.NO",
+      "COURSE",
+      "INSTITUTION TYPE",
+      "YEAR/SEM",
+      "COLLEGE COUNT",
+      "FACULTY COUNT",
+      "STATUS"
+    ],
+    "data": [
+      {
+        "SL.NO": 1,
+        "COURSE": "INDUSTRY 4.0",
+        "INSTITUTION TYPE": "POLYTECHNIC",
+        "YEAR/SEM": "2023-2024 ODD SEM",
+        "COLLEGE COUNT": 420,
+        "FACULTY COUNT": 400,
+        "STATUS": "Completed"
+      },
+      {
+        "SL.NO": 2,
+        "COURSE": "3D PRINTING  USING NX",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2023-2024 ODD SEM",
+        "COLLEGE COUNT": 71,
+        "FACULTY COUNT": 65,
+        "STATUS": "Completed"
+      },
+      {
+        "SL.NO": 3,
+        "COURSE": "ELECTRIC VEHICLE TECHNOLOGY AND MANUFATURING",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2023-2024 ODD SEM",
+        "COLLEGE COUNT": 24,
+        "FACULTY COUNT": 23,
+        "STATUS": "Completed"
+      },
+      {
+        "SL.NO": 4,
+        "COURSE": "INDUTRY 4.0 AND ITS APPPLICATION IN MECHANICAL ENGINEERING ",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2023-2024 ODD SEM",
+        "COLLEGE COUNT": 80,
+        "FACULTY COUNT": 76,
+        "STATUS": "Completed"
+      },
+      {
+        "SL.NO": 5,
+        "COURSE": "ELECTRIC VEHICLE TECHNOLOGY AND MANUFATURING",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2023-2024 ODD SEM",
+        "COLLEGE COUNT": 42,
+        "FACULTY COUNT": 38,
+        "STATUS": "Completed"
+      },
+      {
+        "SL.NO": 6,
+        "COURSE": "INDUSTRIAL IOT  AND INDUSTRY 4.0",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2023-2024 ODD SEM",
+        "COLLEGE COUNT": 84,
+        "FACULTY COUNT": 75,
+        "STATUS": "Completed"
+      },
+      {
+        "SL.NO": 7,
+        "COURSE": "INDUSTRY 4.0",
+        "INSTITUTION TYPE": "POLYTECHNIC",
+        "YEAR/SEM": "2024-2025 ODD SEM",
+        "COLLEGE COUNT": 327,
+        "FACULTY COUNT": 305,
+        "STATUS": "Completed"
+      },
+      {
+        "SL.NO": 8,
+        "COURSE": "INDUSTRIAL IOT  AND INDUSTRY 4.0",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2024-2025 ODD SEM",
+        "COLLEGE COUNT": 47,
+        "FACULTY COUNT": 42,
+        "STATUS": "Completed"
+      },
+      {
+        "SL.NO": 9,
+        "COURSE": "PLC USING SIMATICS",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2024-2025 ODD SEM",
+        "COLLEGE COUNT": 86,
+        "FACULTY COUNT": 83,
+        "STATUS": "Completed"
+      },
+      {
+        "SL.NO": 10,
+        "COURSE": "LOW CODE APPLICATION USING MENDIX",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2024-2025 ODD SEM",
+        "COLLEGE COUNT": 32,
+        "FACULTY COUNT": 30,
+        "STATUS": "Completed"
+      },
+      {
+        "SL.NO": 11,
+        "COURSE": "ELECTRIC VEHICLE TECHNOLOGY ",
+        "INSTITUTION TYPE": "POLYTECHNIC",
+        "YEAR/SEM": "2024-2025 EVEN  SEM",
+        "COLLEGE COUNT": 145,
+        "FACULTY COUNT": 141,
+        "STATUS": "Ongoing"
+      },
+      {
+        "SL.NO": 12,
+        "COURSE": "ADDITIVE MANUFACTURING USING NX",
+        "INSTITUTION TYPE": "POLYTECHNIC",
+        "YEAR/SEM": "2024-2025 EVEN  SEM",
+        "COLLEGE COUNT": 77,
+        "FACULTY COUNT": 60,
+        "STATUS": "Ongoing"
+      },
+      {
+        "SL.NO": 13,
+        "COURSE": "EMBEDDED SYSTEM DESIGN FOR IOT (RASHBERY PI)",
+        "INSTITUTION TYPE": "ENGINEERING ",
+        "YEAR/SEM": "2024-2025 EVEN  SEM",
+        "COLLEGE COUNT": 143,
+        "FACULTY COUNT": 143,
+        "STATUS": "Ongoing"
+      },
+      {
+        "SL.NO": 14,
+        "COURSE": "ELECTRIC VEHICLE TECHNOLOGY FOR EEE",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2024-2025 EVEN  SEM",
+        "COLLEGE COUNT": 65,
+        "FACULTY COUNT": 65,
+        "STATUS": "Ongoing"
+      }
+    ]
+  }
+  

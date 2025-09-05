@@ -1,0 +1,38 @@
+<section>
+    <!-- Image Grid Positioned at the Top Right -->
+    <div class="image-grid">
+      <div class="image" *ngFor="let image of imagesToDisplay; let i = index" [ngClass]="{'flipped': image.flipped}">
+        <img [src]="image.src" [alt]="image.alt" />
+      </div>
+      <button class="cta">
+        <span>More Gallery</span>
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </button>
+
+    </div>
+
+  <!-- Latest News with Image on Left and Text on Right -->
+  <div class="latest-news">
+    <h2 data-aos="zoom-out-left" data-aos-duration="2000">Latest News</h2>
+    <div class="news-item" *ngFor="let news of displayedNews">
+      <div class="news-image">
+        <img [src]="news.src" [alt]="news.alt" />
+      </div>
+      <div class="news-details">
+        <h4 class="news-title">{{ news.title }}</h4>
+        <p class="news-description">{{ news.description }}</p>
+        <span class="news-date">{{ news.date }}</span>
+      </div>
+    </div>
+    <button class="cta">
+      <span>More News</span>
+      <svg width="15px" height="10px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+    </button>
+  </div>
+</section>

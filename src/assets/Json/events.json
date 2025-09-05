@@ -1,0 +1,92 @@
+{
+    "tabs": [
+      {
+        "name": "MoU's",
+        "events": [
+          {
+            "image": "/assets/bannerimage/20250124_164051.jpg",
+            "title": "Event - 1A",
+            "date": "2024-02-20",
+            "description": "This is a short description for Event 1A. It contains important details about the event that attendees should know."
+          },
+          {
+            "image": "/assets/bannerimage/20250124_164505.jpg",
+            "title": "Event- 2A",
+            "date": "2024-02-22",
+            "description": "This is a short description for Event 1B. It also contains key points about the event."
+          }
+          ,
+          {
+            "image": "/assets/bannerimage/20250124_164505.jpg",
+            "title": "Event-3A",
+            "date": "2024-02-22",
+            "description": "This is a short description for Event 1B. It also contains key points about the event."
+          }
+        ]
+      },
+      {
+        "name": "Officials",
+        "events": [
+          {
+            "image": "assets/images/event3.jpg",
+            "title": "Event 2A",
+            "date": "2024-03-05",
+            "description": "This is a short description for Event 2A. More details can be found on our website."
+          },
+          {
+            "image": "assets/images/event4.jpg",
+            "title": "Event 2B",
+            "date": "2024-03-10",
+            "description": "This is a short description for Event 2B. It's important to check the details for updates."
+          }
+        ]
+      },
+      {
+        "name": "Industial Visit",
+        "events": [
+          {
+            "image": "assets/images/event3.jpg",
+            "title": "Event 3A",
+            "date": "2024-03-05",
+            "description": "This is a short description for Event 2A. More details can be found on our website."
+          },
+          {
+            "image": "assets/images/event4.jpg",
+            "title": "Event 3B",
+            "date": "2024-03-10",
+            "description": "This is a short description for Event 2B. It's important to check the details for updates."
+          }
+        ]
+      },
+      {
+        "name": "Naan Mudhalvan",
+        "events": [
+          {
+            "image": "assets/images/event3.jpg",
+            "title": "Event 4A",
+            "date": "2024-03-05",
+            "description": "This is a short description for Event 2A. More details can be found on our website."
+          },
+          {
+            "image": "assets/images/event4.jpg",
+            "title": "Event 4B",
+            "date": "2024-03-10",
+            "description": "This is a short description for Event 2B. It's important to check the details for updates."
+          }
+        ]
+      },                             
+      {
+        "name": "Hackathon",
+        "events": [
+          {
+            "image":"assets/bannerimage/hackathonimage/vlcsnap-2025-04-17-15h47m48s083.png",
+            "title": "JOY UNIVERSITY HACKATHON",
+            "date": "2025-04-17",
+            "description": "We are thrilled to announce the successful completion of Phase 1, First Place of the TANSAM Hackathon Season, hosted at Joy University on April 16, 2025. Themed \"Enhancing Large Vehicle Maintenance with AR/VR and IoT\", the event brought together brilliant minds and cutting-edge ideas focused on transforming the future of large-scale vehicle maintenance through immersive and intelligent technologies.\n\nThe hackathon witnessed enthusiastic participation from students across various institutions, showcasing innovative solutions and technical prowess. The event was a resounding success, marked by creativity, collaboration, and technological excellence.\n\nPrize Winners:\n🥇 1st Prize – Rajalakshmi Engineering College\n🥈 2nd Prize – Joy University\n🥉 3rd Prize – AVC College of Engineering, Mayiladuthurai"
+          }
+         
+        ]
+      }
+    ]
+  }
+  

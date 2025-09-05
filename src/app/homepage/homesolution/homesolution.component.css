@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Rose", serif;
+}
+
+.tansam-about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 30px;
+  background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  gap: 30px;
+}
+
+/* Left: Image */
+.tansam-image {
+  flex: 1;
+  max-width: 45%;
+}
+
+.tansam-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Right: Text */
+.tansam-text {
+  flex: 1;
+  max-width: 50%;
+  color: #333;
+}
+
+.tansam-text h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #095296;
+  margin-bottom: 15px;
+}
+
+.tansam-text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #009999;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.tansam-text p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+  .tansam-about-wrapper {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .tansam-image,
+  .tansam-text {
+    max-width: 100%;
+  }
+
+  .tansam-text h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .tansam-text p {
+    font-size: 18px;
+  }
+}

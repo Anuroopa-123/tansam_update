@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&display=swap');
+
+
+/* General Styling */
+.labs-container {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background: url('/assets/bg/labsbg.jpg') center/cover no-repeat;
+    /* Background Image */
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 25px;
+    z-index: 0;
+}
+
+/* Background Overlay */
+.labs-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    /* White overlay with 50% opacity */
+    z-index: 0;
+}
+
+/* Ensure content is above the overlay */
+.labs-container>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Title Centered */
+.section-title {
+    font-family: "Rubik", serif;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #0a5296;
+    text-shadow: 2px 2px 10px rgba(10, 82, 150, 0.3);
+}
+
+/* Description */
+.lab-description {
+    font-size: 1.3rem;
+    font-weight: 400;
+    max-width: 50%;
+    margin: 0 auto 40px;
+    color: #333;
+    font-family: "Rubik", serif;
+    opacity: 0.9;
+}
+
+/* Image-Text Container */
+.image-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Image-Text Pair (Slide Animation) */
+.image-text-pair {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+    width: 90%;
+}
+
+/* Active Slide */
+.image-text-pair.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Centered Image Title */
+.center-title {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00AEEF;
+    z-index: 10;
+}
+
+/* Text on Left */
+.text-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    font-family: "Rubik", serif;
+    position: relative;
+    /* Ensure the pseudo-element is positioned correctly */
+}
+
+/* Background Image at Bottom */
+.text-content::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* Aligns image at the bottom */
+    left: 0;
+    /* Moves image to the left */
+    transform: none;
+    /* Removes center alignment */
+    width: 600px;
+    height: 450px;
+    background: url('/assets/bg/labsbg3.png') no-repeat left bottom/contain;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.text-content h2 {
+    font-size: 2vw;
+    font-weight: 900;
+    color: #00AEEF;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-left: -12px;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    /* Required for shine effect */
+
+    /* Outer Stroke Effect (Optional) */
+    -webkit-text-stroke: 1px #8ee1ff;
+
+    /* Text Shadow for Depth */
+    text-shadow:
+        1px 1px 2px rgba(10, 82, 140, 0.3),
+        3px 3px 3px rgba(10, 82, 140, 0.4),
+        5px 5px 4px rgba(10, 82, 140, 0.5),
+        7px 7px 5px rgba(10, 82, 140, 0.6);
+
+    transform: perspective(500px);
+
+    /* Shine Effect */
+    background: linear-gradient(90deg, #00AEEF, #ffffff, #00AEEF);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+
+/* ✨ Shine Animation */
+@keyframes shine {
+    0% {
+        background-position: -100% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+
+
+/* Styled Text */
+.image-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3f7bb4;
+    padding: 15px;
+    line-height: 2;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    /* Ensure pseudo-element is positioned correctly */
+    overflow: visible;
+    /* Ensure the pseudo-element is not clipped */
+}
+
+/* Background Image at the Top Right */
+.image-content::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    /* Adjust as needed */
+    right: -50px;
+    /* Moves image slightly outside for visibility */
+    left: 730px;
+    bottom: 900px;
+    width: 400px;
+    /* Adjust width */
+    height: 600px;
+    /* Adjust height */
+    background: url('/assets/bg/labsbg3.png') no-repeat right top/contain;
+    opacity: 0.2;
+    /* Increase visibility */
+    z-index: -1;
+    /* Ensure it appears above the background */
+    pointer-events: none;
+    /* Prevent interactions */
+}
+
+.image-content img:hover {
+    transform: scale(1.5);
+    /* Scales the element */
+    transition: transform 0.5s ease-in-out;
+    /* Smooth transition */
+}
+
+
+/* Image Styling */
+.lab-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.lab-image:hover {
+    transform: scale(1.05);
+}
+
+/* 🔥 REVERSE LAYOUT (For Every 2nd Slide) */
+.image-text-pair.reverse {
+    flex-direction: row-reverse;
+    /* Reverse image & text */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-text-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-text-pair {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .image-content {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .lab-image {
+        height: 300px;
+    }
+
+    .center-title {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+    }
+}

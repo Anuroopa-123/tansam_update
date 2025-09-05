@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+
+.title {
+  text-align: center;
+  color: #095296;
+  margin-top: 60px;
+  font-family: "Faculty Glyphic", serif;
+}
+
+.title h3 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #009999;
+}
+
+section.highlight-section {
+  margin-bottom: 40px;
+}
+
+.entrepreneurship-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  /* background: linear-gradient(180deg, #e9f7fd 0%, #ffffff 100%); */
+  border-radius: 16px;
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 40px auto;
+  font-family: 'Inter', sans-serif;
+  animation: fadeIn 1.2s ease-in-out;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.entrepreneurship-content {
+  width: 100%;
+  max-width: 900px;
+}
+
+.entrepreneurship-content p {
+  font-size: 1.125rem;
+  line-height: 1.9;
+  color: #212121;
+  text-align: justify;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* Highlight section styling */
+
+/* .highlight-section {
+55
++    background-color: #f1fcff;
+56
++    padding: 30px;
+57
++    border-left: 6px solid #00bcd4;
+58
++    border-radius: 10px;
+59
++    margin-top: 40px;
+60
++    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.08);
+61
++} */
+
+.section-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #006d77;
+  transition: color 0.3s ease;
+  margin-bottom: 15px;
+  cursor: default;
+}
+
+/* .highlight-section:hover .section-heading {
+73
++    color: #004d4d;
+74
++} */
+
+/* .highlight-section:hover {
+78
++    background-color: #e6f7fa;
+79
++} */
+.highlight-section h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #009999;
+  margin-bottom: 15px;
+}
+
+.more-info-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 35px;
+  padding-right: 20px;
+}
+
+.cta {
+  position: relative;
+  margin-right: 55px;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .entrepreneurship-wrapper {
+    width: 90%;
+    padding: 40px 15px;
+  }
+
+  .cta span {
+    font-size: 16px;
+  }
+  .title h3 {
+    font-size: 24px;
+  }
+}

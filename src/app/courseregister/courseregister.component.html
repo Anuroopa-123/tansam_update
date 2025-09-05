@@ -1,0 +1,415 @@
+<ng-container *ngIf="paginatedCourses?.length">
+  <div class="title">
+    <h3>Testing</h3>
+  </div>
+  <div class="course-grid">
+    <div
+      class="course-card"
+      *ngFor="let course of paginatedCourses"
+      (click)="viewCourse(course)"
+    >
+      <div class="image-container">
+        <img
+          [src]="course.imageUrl"
+          alt="{{ course.title }}"
+          class="course-img"
+        />
+        <div class="Overlaylab">
+          <p>{{ course.course_lab }}</p>
+        </div>
+      </div>
+      <h3>{{ course.title }}</h3>
+      <p class="date">
+        <i class="fa-solid fa-calendar-days"></i> {{ course.start_date }}
+      </p>
+      <p>{{ course.description }}</p>
+    </div>
+  </div>
+
+  <!-- Pagination Controls -->
+  <div class="pagination">
+    <button (click)="goToPage(1)" [disabled]="currentPage === 1">
+      <i class="fa-solid fa-angles-left"></i>
+    </button>
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
+      <i class="fa-solid fa-angle-left"></i>
+    </button>
+
+    <button
+      *ngFor="let page of [].constructor(totalPages()); let i = index"
+      [class.active]="currentPage === i + 1"
+      (click)="goToPage(i + 1)"
+    >
+      {{ i + 1 }}
+    </button>
+
+    <button
+      (click)="goToPage(currentPage + 1)"
+      [disabled]="currentPage === totalPages()"
+    >
+      <i class="fa-solid fa-angle-right"></i>
+    </button>
+    <button
+      (click)="goToPage(totalPages())"
+      [disabled]="currentPage === totalPages()"
+    >
+      <i class="fa-solid fa-angles-right"></i>
+    </button>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="course">
+  <!-- Banner with Overlay Text -->
+  <div class="banner">
+    <img
+      src="assets/headerimage/tansambg.png"
+      alt="Course Banner"
+      class="banner-img"
+    />
+    <div class="banner-overlay">
+      <h1>{{ course.title }}</h1>
+    </div>
+  </div>
+
+  <!-- Flexbox Layout: Left (Description) | Right (Payment Card) -->
+  <div class="content-container">
+    <!-- Left: Course Details -->
+    <div class="course-details">
+      <h2>Course Information</h2>
+      <p><strong>Lab: </strong>{{ course.labs }}</p>
+      <p><strong>Start Date:</strong> {{ course.startDate }}</p>
+      <p><strong>Time:</strong> {{ course.time }}</p>
+      <p
+        [innerHTML]="
+          course?.description ? course.description : 'Yet to be posted.'
+        "
+      ></p>
+    </div>
+
+    <!-- Right: Payment Card -->
+    <div class="payment-card">
+      <!-- <h3>Payment Details</h3>
+      <p><strong>Price:</strong> $199</p>
+      <button class="pay-button">Proceed to Payment</button> -->
+      <div class="register">
+        <h2>Register panel</h2>
+        <div class="colorblink">
+          <p>
+            <i class="fa-regular fa-pen-to-square"></i> <strong> Mode:</strong>
+            <span class="blink-text">{{ course.mode }}</span>
+          </p>
+        </div>
+        <div class="refer">
+          <p><strong>Contact Person:</strong> {{ course.contact_person }}</p>
+          <p>
+            <strong>Contact Mail:</strong>
+            <a [href]="'mailto:' + course.contact_mail">{{
+              course.contact_mail
+            }}</a>
+          </p>
+        </div>
+        <div class="smtbtn">
+          <button class="pay-button" (click)="openModal()">Let's Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Horizontal Line -->
+  <hr class="divider" />
+
+  <!-- Social Media Share Buttons -->
+  <div class="social-share">
+    <span>Share this course:</span>
+    <a
+      [href]="'https://www.facebook.com/sharer/sharer.php?u=' + currentUrl"
+      target="_blank"
+      class="social-btn fb"
+    >
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a
+      [href]="'https://twitter.com/intent/tweet?url=' + currentUrl"
+      target="_blank"
+      class="social-btn twitter"
+    >
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a
+      [href]="
+        'https://www.linkedin.com/shareArticle?mini=true&url=' + currentUrl
+      "
+      target="_blank"
+      class="social-btn linkedin"
+    >
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+    <a
+      [href]="'https://api.whatsapp.com/send?text=' + currentUrl"
+      target="_blank"
+      class="social-btn whatsapp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <div *ngIf="showModal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-button" (click)="closeModal()">&times;</span>
+      <h2>Register for {{ course.title }}</h2>
+
+      <form #registerForm="ngForm" (ngSubmit)="submitForm(registerForm)">
+        <div class="form-grid">
+          <!-- Personal Information Section -->
+          <div class="personal">
+            <span class="section-label">Personal Details</span>
+
+            <div class="input-group">
+              <input
+                type="text"
+                name="name"
+                [(ngModel)]="formData.name"
+                #name="ngModel"
+                required
+                [ngClass]="{
+                  'error-border': name.invalid && name.touched,
+                  'valid-border': name.valid
+                }"
+              />
+              <label>Enter Your Name</label>
+              <span class="error-text" *ngIf="name.invalid && name.touched"
+                >Name is required.</span
+              >
+            </div>
+
+            <div class="input-group">
+              <input
+                type="date"
+                name="dob"
+                [(ngModel)]="formData.dob"
+                #dob="ngModel"
+                required
+                placeholder=" "
+                [ngClass]="{
+                  'error-border': dob.invalid && dob.touched,
+                  'valid-border': dob.valid
+                }"
+              />
+              <label>Date of Birth</label>
+              <span class="error-text" *ngIf="dob.invalid && dob.touched"
+                >DOB is required.</span
+              >
+            </div>
+
+            <div class="input-group">
+              <input
+                type="tel"
+                name="mobile"
+                [(ngModel)]="formData.mobile"
+                #mobile="ngModel"
+                pattern="^[0-9]{10}$"
+                required
+                placeholder=" "
+                [ngClass]="{
+                  'error-border': mobile.invalid && mobile.touched,
+                  'valid-border': mobile.valid
+                }"
+              />
+              <label>Mobile Number</label>
+              <span class="error-text" *ngIf="mobile.invalid && mobile.touched">
+                Mobile must be 10 digits.
+              </span>
+            </div>
+
+            <div class="input-group">
+              <input
+                type="email"
+                name="email"
+                [(ngModel)]="formData.email"
+                #email="ngModel"
+                required
+                placeholder=" "
+                [ngClass]="{
+                  'error-border': email.invalid && email.touched,
+                  'valid-border': email.valid
+                }"
+              />
+              <label>Email ID</label>
+              <span class="error-text" *ngIf="email.invalid && email.touched">
+                Enter a valid email.
+              </span>
+            </div>
+
+            <!-- Address Section -->
+            <div class="input-group">
+              <input
+                type="text"
+                name="addressLine1"
+                [(ngModel)]="formData.addressLine1"
+                #addressLine1="ngModel"
+                required
+                placeholder=" "
+                [ngClass]="{
+                  'error-border': addressLine1.invalid && addressLine1.touched,
+                  'valid-border': addressLine1.valid
+                }"
+              />
+              <label>Address Line 1</label>
+              <span
+                class="error-text"
+                *ngIf="addressLine1.invalid && addressLine1.touched"
+              >
+                Address is required.
+              </span>
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                name="addressLine2"
+                [(ngModel)]="formData.addressLine2"
+                placeholder=" "
+              />
+              <label>Address Line 2</label>
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                name="city"
+                [(ngModel)]="formData.city"
+                #city="ngModel"
+                required
+                placeholder=" "
+                [ngClass]="{
+                  'error-border': city.invalid && city.touched,
+                  'valid-border': city.valid
+                }"
+              />
+              <label>City</label>
+              <span class="error-text" *ngIf="city.invalid && city.touched">
+                City is required.
+              </span>
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                name="state"
+                [(ngModel)]="formData.state"
+                #state="ngModel"
+                required
+                placeholder=" "
+                [ngClass]="{
+                  'error-border': state.invalid && state.touched,
+                  'valid-border': state.valid
+                }"
+              />
+              <label>State</label>
+              <span class="error-text" *ngIf="state.invalid && state.touched">
+                State is required.
+              </span>
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                name="zip"
+                [(ngModel)]="formData.zip"
+                #zip="ngModel"
+                pattern="^[0-9]{6}$"
+                required
+                placeholder=" "
+                [ngClass]="{
+                  'error-border': zip.invalid && zip.touched,
+                  'valid-border': zip.valid
+                }"
+              />
+              <label>ZIP Code</label>
+              <span class="error-text" *ngIf="zip.invalid && zip.touched">
+                ZIP Code must be 6 digits.
+              </span>
+            </div>
+          </div>
+
+          <!-- Department Information Section -->
+          <div class="depart">
+            <span class="section-label">Domain Details</span>
+
+            <div class="input-group">
+              <input
+                type="text"
+                name="collegeName"
+                [(ngModel)]="formData.collegeName"
+                #collegeName="ngModel"
+                required
+                placeholder=" "
+                [ngClass]="{
+                  'error-border': collegeName.invalid && collegeName.touched,
+                  'valid-border': collegeName.valid
+                }"
+              />
+              <label>College / Organization</label>
+              <span
+                class="error-text"
+                *ngIf="collegeName.invalid && collegeName.touched"
+                >College Name is required.</span
+              >
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                name="department"
+                [(ngModel)]="formData.department"
+                #department="ngModel"
+                required
+                placeholder=" "
+                [ngClass]="{
+                  'error-border': department.invalid && department.touched,
+                  'valid-border': department.valid
+                }"
+              />
+              <label>Department / Domain</label>
+              <span
+                class="error-text"
+                *ngIf="department.invalid && department.touched"
+                >Department is required.</span
+              >
+            </div>
+
+            <div class="input-group">
+              <input
+                type="tel"
+                name="year"
+                [(ngModel)]="formData.year"
+                #year="ngModel"
+                required
+                placeholder=" "
+                (keypress)="restrictToNumbers($event)"
+                [ngClass]="{
+                  'error-border': year.invalid && year.touched,
+                  'valid-border': year.valid
+                }"
+              />
+
+              <label>Year / Experience</label>
+              <span class="error-text" *ngIf="year.invalid && year.touched">
+                Year must be 1, 2, 3, or 4 like.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="button-container">
+          <button type="submit" [disabled]="registerForm.invalid">
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Registration Modal END -->
+</ng-container>

@@ -1,0 +1,34 @@
+image: node:18
+
+pipelines:
+  branches:
+    main:
+      - step:
+          name: Build Angular App
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build --prod
+            - echo "Checking build output..."
+            - ls -l dist/
+            - ls -l dist/tansam_new_cms/
+            - tar -czf dist.tar.gz dist/tansam_new_cms || { echo "Tar failed"; exit 1; }
+            - ls -l dist.tar.gz || { echo "dist.tar.gz missing after tar"; exit 1; }
+          artifacts:
+            - dist.tar.gz  # Save dist.tar.gz as an artifact
+
+      - step:
+          name: Deploy to VPS
+          script:
+            - apt-get update && apt-get install -y sshpass
+            - mkdir -p ~/.ssh
+            - ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
+            - sshpass -p "$SERVER_PASSWORD" scp dist.tar.gz $SERVER_USER@$SERVER_IP:/home/mytansam/
+            - |
+              sshpass -p "$SERVER_PASSWORD" ssh $SERVER_USER@$SERVER_IP << 'EOF'
+                rm -rf /home/mytansam/tansam_web/*
+                tar -xzf /home/mytansam/dist.tar.gz -C /home/mytansam/tansam_web/
+                rm /home/mytansam/dist.tar.gz
+                sudo systemctl restart nginx
+              EOF

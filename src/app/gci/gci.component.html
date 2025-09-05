@@ -1,0 +1,82 @@
+<div class="container">
+  <!-- Title -->
+  <h1 class="title">{{ title }}</h1>
+
+  <!-- Description -->
+  <p class="description">{{ description }}</p>
+
+  <!-- Tab Navigation and Content -->
+  <div class="content-wrapper">
+    <div class="tabs">
+      <button
+        class="tab"
+        *ngFor="let tab of tabs"
+        (click)="selectTab(tab.id)"
+        [class.active]="selectedTab === tab.id"
+      >
+        {{ tab.title }}
+      </button>
+    </div>
+
+    <div class="tab-content">
+      <ng-container *ngFor="let tabItem of tabs">
+        <div *ngIf="selectedTab === tabItem.id">
+          <p>{{ tabItem.content }}</p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- Table Section -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Designation</th>
+        <th>Job Location</th>
+        <th>Total No's</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let job of jobList">
+        <td>{{ job.designation }}</td>
+        <td>{{ job.location }}</td>
+        <td>{{ job.total }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Why Choose Us Section -->
+  <div class="why-choose">
+    <h2 class="section-title">{{ whyChooseTitle }}</h2>
+    <ul class="benefits-list">
+      <li *ngFor="let point of whyChoosePoints">
+        <strong>{{ point.heading }}:</strong> {{ point.description }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Industries We Serve & Let's Connect -->
+  <div class="industries-connect">
+    <!-- Left: Industries We Serve -->
+    <div class="industries">
+      <h2>{{ industries.title }}</h2>
+      <ul>
+        <li *ngFor="let industry of industries.list">{{ industry }}</li>
+      </ul>
+    </div>
+
+    <!-- Right: Let's Connect -->
+    <div class="connect">
+      <h2>{{ connect.title }}</h2>
+      <p>{{ connect.description }}</p>
+    </div>
+  </div>
+  <!-- Contact Us Section -->
+<div class="contact-card">
+  <h2>{{ contactUs.title }}</h2>
+  <p><strong>Contact:</strong> {{contactUs.number}}</p>
+  <p>{{ contactUs.emailJobs.text }} <a href="mailto:{{ contactUs.emailJobs.email }}">{{ contactUs.emailJobs.email }}</a></p>
+  <p>{{ contactUs.emailTraining.text }} <a href="mailto:{{ contactUs.emailTraining.email }}">{{ contactUs.emailTraining.email }}</a></p>
+</div>
+
+</div>

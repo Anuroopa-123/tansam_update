@@ -1,0 +1,11 @@
+<div class="industry-container">
+    <div *ngFor="let company of companies" class="industry-card">
+      <a [href]="company.website" target="_blank">
+        <div class="image-overlay">
+          <img [src]="company.image" alt="{{ company.name }}">
+          <div class="overlay-text">{{ company.name }}</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  

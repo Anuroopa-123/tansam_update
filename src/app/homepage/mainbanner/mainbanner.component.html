@@ -1,0 +1,32 @@
+<div class="banner-background">
+  <div class="banner-container">
+    <!-- Image with smooth transition -->
+    <div class="banner-image-container">
+      <div *ngFor="let img of images; let i = index" 
+           class="image-wrapper"
+           [class.active]="i === currentImageIndex"
+           [ngStyle]="{'background-image': 'url(' + img.src + ')'}">
+      </div>
+    </div>
+
+    <!-- Overlay with Text -->
+    <div class="banner-overlay" *ngIf="images.length > 0">
+      <div class="banner-text">
+        <h3>{{ images[currentImageIndex].title }}</h3>
+        <p>{{ images[currentImageIndex].caption }}</p>
+      </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots" *ngIf="images.length > 0">
+      <span *ngFor="let img of images; let i = index" 
+            [class.active]="i === currentImageIndex" 
+            (click)="goToSlide(i)"></span>
+    </div>
+
+    <!-- Pause / Play Button -->
+    <button class="slider-control" (click)="toggleSlider()" title="{{ isPaused ? 'Play' : 'Pause' }}">
+      <i class="fas" [ngClass]="isPaused ? 'fa-play' : 'fa-pause'"></i>
+    </button>
+  </div>
+</div>

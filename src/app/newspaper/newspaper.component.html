@@ -1,0 +1,21 @@
+<div class="title">
+  <h2>Newspaper</h2>
+</div>
+<!-- Image Grid -->
+<div class="gallery-container">
+  <div
+    *ngFor="let image of images"
+    class="gallery-item"
+    (click)="openModal(image)"
+  >
+    <img [src]="image" alt="Media Image" />
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" *ngIf="selectedImage">
+  <div class="modal-content">
+    <button class="close-button" (click)="closeModal()">✖</button>
+    <img [src]="selectedImage" alt="Full Image" />
+  </div>
+</div>

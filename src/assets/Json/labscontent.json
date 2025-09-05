@@ -1,0 +1,88 @@
+[
+    {
+      "key": "Innovative_Manufacturing",
+      "title": "Innovative Manufacturing",
+      "description": "Future-ready digital manufacturing hub at TANSAM, powered by Siemens software and advanced tools. Enables creation of complex components, legacy part recreation, and workflow optimization. Integrates digital tools with physical processes for precision and innovation. Reverse Engineering: 3D scanning with Calibry Scanner, digital reconstruction of parts, parametric modeling using Siemens NX and Solid Edge, and rapid design-to-production integration. 3D Metal Printing: Markforged metal printing for strong, lightweight parts, rapid prototyping, complex geometries, and seamless CAD-to-print workflow via Siemens platforms, reducing lead time and material waste.",
+      "software": "Siemens NX and Solid Edge",
+      "images": [
+        "assets/labs/Innovative_manu/ivmp1.png",
+        "assets/labs/Innovative_manu/ivmp2.jpg",
+        "assets/labs/Innovative_manu/ivmp3.jpg",
+        "assets/labs/Innovative_manu/ivmp4.jpg"
+      ]
+    },
+    {
+      "key": "Smart_Factory_Center",
+      "title": "Smart Factory Center",
+      "description": "The Smart Factory Department at TANSAM leverages cutting-edge Industry 4.0 technologies to deliver advanced simulation and digital twin solutions using Siemens Process Simulate and Siemens Plant Simulation. We specialize in robotic simulation, factory layout optimization, and virtual commissioning to help industries visualize, test, and validate manufacturing processes before implementation. Our services enable predictive maintenance, real-time monitoring, and performance optimization of complex production systems. By replicating real-world operations in a virtual environment, we help reduce downtime, minimize risks, and enhance productivity. We offer tailored solutions for MSMEs, OEMs, and large enterprises to support lean manufacturing and sustainable practices. Through high-fidelity modelling and data-driven insights, we streamline operations and accelerate innovation. Our department plays a key role in transforming conventional factories into smart, flexible, and efficient production ecosystems. We focus on optimizing resource utilization, improving throughput, and identifying bottlenecks in manufacturing workflows. By integrating simulation with IoT and automation, we enable seamless industrial integration. Our team is committed to supporting the complete digital transformation of manufacturing. At TANSAM, we empower industries to build the factories of the future today.",
+      "software": "Tecnomatix process simulate, Tecnomatix plant simulation",
+      "images": [
+        "assets/labs/smartfactory/smartimg1.jpg",
+        "assets/labs/smartfactory/smartimg2.jpg",
+        "assets/labs/smartfactory/smartimg3.jpg",
+        "assets/labs/smartfactory/smartimg4.jpg",
+        "assets/labs/smartfactory/smartimg.jpg",
+        "assets/labs/smartfactory/smartimg6.jpg"
+      ]
+    },
+    {
+        "key": "AR/VR/MR_Research_Centre",
+        "title": "AR | VR | MR Research Centre",
+        "description": "The AR/VR/MR Research Lab is dedicated to pioneering immersive technologies that redefine how we train, learn, and interact with digital content. Our primary focus is on developing high-impact Virtual Reality (VR) simulations and training systems, while also exploring Augmented Reality (AR) and Mixed Reality (MR) to enhance real-world workflows and educational experiences.By blending cutting-edge 3D environments, intelligent interaction design, and real-time responsiveness, we create powerful immersive applications for industries including education, healthcare, manufacturing, and defence. Our goal is to provide scalable, repeatable, and measurable solutions that drive performance and reduce risk in real-world tasks.",
+        "software": "Unity for real-time 3D XR development, Blender for 3D asset creation and animation, Vuforia for marker-based AR tracking, AR Core for Android AR development, and XR Interaction Toolkit for robust VR and MR interactions in Unity.",
+        "images": [
+                "/assets/labs/arvr/2.jpg",
+                "/assets/labs/arvr/original.png"
+        ]
+    },
+    {
+        "key": "PLM",
+        "title": "Research Centre For PLM",
+        "description": "Connecting Innovation Across the Entire Product Lifecycle: The Research Center for Product Lifecycle Management (PLM) at TANSAM is a strategic hub designed to transform how products are conceived, developed, and managed across their entire life span. Powered by Siemens Teamcenter, the world’s leading PLM software, this center helps organizations achieve digital continuity, improve collaboration, and drive innovation at every stage of the product journey. We provide the expertise, tools, and infrastructure needed to implement robust, future-ready PLM strategies across industries. Our Core Solutions - PLM Engineering Services: Streamline complex product data and processes across global teams - Centralized management of product data and revisions, BOM (Bill of Materials) creation, tracking, and control, Workflow automation for engineering change management, Integration with leading CAD platforms (NX, Solid Edge, etc.). Product Requirements Engineering: Ensure product success from the start by aligning design and development with customer and regulatory needs - Define, capture, and manage complex product requirements, Track traceability across the development lifecycle, Ensure compliance and reduce late-stage design changes. Model- Based Systems Engineering (MBSE): Enable smarter design and integration of complex systems through a model-driven approach - System-level architecture modeling and simulation, Multi- domain collaboration across mechanical, electrical, and software teams, Early validation of functional performance and system interactions.",
+        "software":"Siemens Teamcenter",
+        "images":[
+           "/assets/labs/PLM/Plmimg1.png",
+           "/assets/labs/PLM/Plmimg2.png",
+           "/assets/labs/PLM/Plmimg3.jpg",
+           "/assets/labs/PLM/Plmimg4.jpg"
+        ]
+       
+    },
+    {
+        "key": "Asset_Performance",
+        "title": "Research Centre For Asset Performance",
+        "description": "The Center for Predictive Engineering Analytics (CPEA) Lab specializes in digital twin development and advanced engineering simulations to enhance product design, reduce prototyping costs, and accelerate innovation. By integrating technologies like FEA, CFD, MBD, and thermal-structural analysis, the lab provides predictive insights across automotive, aerospace, energy, and manufacturing sectors. CPEA collaborates with industries, researchers, and academic institutions to solve real-world engineering challenges through simulation-driven solutions.",
+        "software":"Simcenter 3D, STAR-CCM+, NX Nastran, LMS Virtual Lab, Simcenter Amesim, FloEFD",
+        "images":[
+           "/assets/labs/Product Innovation/industry-4-0.jpg"
+        ]
+       
+    },
+    {
+        "key": "Product_Innovation_Center",
+        "title": "Product Innovation Center",
+        "description": "Empowering Next-Gen Product Design &amp; Innovation: At the heart of the TANSAM – Industry 4.0 Center of Excellence lies the Product Innovation Center, a cutting-edge facility dedicated to driving innovation in product development and engineering. Powered by world-class Siemens technology, the center is a hub for creativity, digital transformation, and precision engineering. We specialize in supporting industries, startups, and academia through advanced tools and expert guidance to bring ideas to life with speed, efficiency, and excellence. Our Core Solutions: New Product Development (NPD) - Transform ideas into tangible, manufacturable products with our end-to-end NPD services: Concept development and feasibility analysis, Detailed 3D modeling and CAD design, Functional prototyping and validation and Industry-compliant documentation and support. Whether you are redesigning a simple component or a complex system, we provide the tools and expertise to accelerate your time-to-market. Design Optimization: Enhance the performance, efficiency, and manufacturability of your products with our intelligent design optimization services: Weight and material reduction, Stress analysis and simulation, Cost-effective design alternatives &amp; Ergonomics and aesthetic refinement. Our goal is to deliver designs that are not only innovative but also smarter, leaner, and production-ready. ",
+        "software":"Siemens NX and Solid Edge",
+        "images":[
+          "/assets/labs/Product Innovation/Producinv1.png",
+          "/assets/labs/Product Innovation/Producinv2.jpg",
+          "/assets/labs/Product Innovation/Producinv3.png",
+           "/assets/labs/Product Innovation/Producinv4.png"
+        ]
+    },
+    {
+        "key": "Predictive_Engineering",
+        "title": "Predictive Engineering",
+        "description": "Simulate. Analyze. Predict. Perfect: The Predictive Engineering Center at TANSAM is designed to empower industries, researchers, and product developers with cutting-edge simulation technologies that enable smarter design decisions and reduce physical prototyping costs. Through high-fidelity virtual testing and multiphysics simulation, we help predict product performance under real-world conditions—before a single part is manufactured. With powerful Siemens simulation tools and deep domain expertise, we accelerate innovation, ensure reliability, and optimize product designs from concept to launch. Our Core Simulation Solutions - Finite Element Analysis (FEA): Simulate structural behavior under load, pressure, and stress, Identify weaknesses, optimize material usage, and ensure durability, Support for linear, nonlinear, thermal, and fatigue analyses. Computational Fluid Dynamics (CFD): Analyze fluid flow, heat transfer, and thermal management, Optimize aerodynamics, cooling systems, and fluid-structure interactions, Tackle complex multiphase and turbulent flow scenarios. Multi-Body Dynamics (MBD): Simulate real-time motion of mechanical assemblies, Analyze kinematics, dynamic loads, and control interactions, Evaluate systems like suspension, robotics, and machinery with precision.",
+        "software":"Simcenter 3D &amp; Simcenter StarCCM+",
+        "images":[
+          "assets/labs/predictive engi/Predimg1.png",
+          "assets/labs/predictive engi/Predimg2.jpg",
+          "assets/labs/predictive engi/Predimg3.jpg",
+          "assets/labs/predictive engi/Predimg4.png",
+          "assets/labs/predictive engi/Predimg5.png",
+          "assets/labs/predictive engi/Predimg6.jpg",
+          "assets/labs/predictive engi/Predimg7.jpg"
+        ]
+      }
+    ]

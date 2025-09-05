@@ -1,0 +1,67 @@
+<div class="define">
+    <div class="title">
+        <h3>Faculty Upskilling Courses</h3>
+    </div>
+
+    <div class="description">
+        <p>
+            TANSAM takes immense pride in empowering over 1,500+ faculty members, equipping them with cutting-edge skills through industrial exposure in collaboration with TIDCO. The TN Skills initiative meticulously bridges the gap between academia and industry, elevating pedagogical practices. The Naan Mudhalvan program is pivotal in cultivating a cadre of educators who are catalysts for innovation and leadership. This transformative effort ensures that faculty are empowered to shape a generation of highly skilled professionals. Collectively, we are forging a future-driven, intellectually robust educational ecosystem.
+        </p>
+    </div>
+</div>
+
+<!-- Ongoing Table -->
+<div class="color">
+    <h2>Ongoing Courses</h2>
+</div>
+
+<div class="table-container"> <!-- Add this wrapper for scrolling -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>SL.NO</th>
+          <th *ngFor="let header of headers">{{ header }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of ongoingData; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td *ngFor="let header of headers">{{ row[header] }}</td>
+        </tr>
+        <!-- Ongoing Total Row -->
+        <tr style="font-weight: bold; background-color: #d1ecf1;">
+          <td></td> <!-- Empty SL.NO column for the total row -->
+          <td *ngFor="let header of headers">{{ ongoingTotal[header] || '' }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+<br>
+
+<!-- Completed Table -->
+<div class="color">
+    <h2>Completed Courses</h2>
+</div>
+
+<div class="table-container"> <!-- Add this wrapper for scrolling -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>SL.NO</th>
+          <th *ngFor="let header of headers">{{ header }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of completedData; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td *ngFor="let header of headers">{{ row[header] }}</td>
+        </tr>
+        <!-- Completed Total Row -->
+        <tr style="font-weight: bold; background-color: #d4edda;">
+          <td></td> <!-- Empty SL.NO column for the total row -->
+          <td *ngFor="let header of headers">{{ completedTotal[header] || '' }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/* ✅ Background Section */
+.job-header {
+  background-image: url('/assets/headerimage/tansambg.png');
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  position: relative;
+}
+
+.overlay {
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.job-header .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.job-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* ✅ Job Info Section */
+.job-info {
+  padding: 10px;
+  max-width: 70%;
+  margin: -50px auto 20px auto;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* ✅ Job Meta Section */
+.job-meta {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.job-meta p {
+  margin: 0;
+  font-size: 20px;
+  z-index: 1000;
+  color: #fff;
+}
+
+.job-meta strong {
+  /* color: #009999; */
+  color: #fff;
+}
+
+/* ✅ Job Description Section */
+.job-description {
+  margin-top: 20px;
+}
+
+/* .job-description h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  } */
+
+.job-description p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ✅ Back Button */
+.back-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.back-button a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-button a:hover {
+  color: #0056b3;
+}
+
+.required {
+  color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.85em;
+  margin-bottom: 10px;
+}
+
+
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.smtbtn button {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.smtbtn button:hover {
+  background-color: #0056b3;
+}
+
+.job-info {
+  padding: 20px;
+}
+
+.back-button a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ✅ Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content label {
+  display: block;
+  margin: 12px 0 6px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}

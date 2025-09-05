@@ -1,0 +1,181 @@
+@import 'ngx-toastr/toastr';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+.title{
+    text-align: center ;
+}
+.title h2{
+    font-family: "Afacad Flux", sans-serif;
+    color: #009999;
+    font-size: 26px;
+}
+/* Card Container */
+.card {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 12px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); */
+    overflow: hidden;
+    width: 80%;
+    margin: 10px auto;
+    /* padding: 20px; */
+}
+
+/* Image Section */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Form Section */
+.form-container {
+    flex: 2;
+    padding: 15px;
+    background: white;
+    text-align: center;
+}
+
+/* Flexbox Layout for Inputs */
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+/* Uniform Input Size */
+.input-group {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 280px; /* Ensures consistent width */
+    position: relative;
+}
+
+/* Ensure input and select elements have the same size */
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: white;
+    height: 45px; /* Ensures same height */
+    box-sizing: border-box;
+}
+
+/* Floating Labels */
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-80%);
+    font-size: 14px;
+    color: #666;
+    transition: all 0.3s ease-in-out;
+    background: white;
+    padding: 0 5px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+/* Adjust label when input is filled */
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label,
+.input-group select:focus+label,
+.input-group select:not(:placeholder-shown)+label {
+    top: 5px;
+    font-size: 16px;
+    color: #009999;
+    font-weight: 600;
+    font-family: "Afacad Flux", sans-serif;
+}
+
+/* Ensure Select Dropdown Matches Input */
+.input-group select {
+    appearance: none; /* Removes default dropdown styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+}
+
+/* Make sure buttons are also uniform */
+/* button {
+    width: 100%;
+    height: 45px;
+} */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    font-family: "Ubuntu", sans-serif;
+  }
+  /* Highlight input with error */
+.input-group input.ng-invalid.ng-touched,
+.input-group select.ng-invalid.ng-touched {
+    border: 2px solid red !important;
+}
+
+
+  .submitbtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+button {
+    /* width: 100%; */
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Toastr Styling */
+#toast-container>.toast {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px !important;
+}
+
+#toast-container>.toast-success {
+    background-color: green !important;
+}
+
+#toast-container>.toast-error {
+    background-color: #dc3545 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

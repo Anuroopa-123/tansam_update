@@ -1,0 +1,73 @@
+<!-- <div class="solution-container" *ngIf="solutions.length > 0">
+  <div *ngFor="let solution of solutions; let i = index" class="solution bg-style" [class.active]="i === currentIndex"
+    [ngStyle]="{ 'background-image': 'url(' + solution.src + ')' }">
+    <div class="content">
+      <h2>{{ solution.title }}</h2>
+      <p>{{ solution.description }}</p>
+      <button (click)="takeTour(solution)">
+        <span>Take A Tour</span>
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-icon">
+            <path
+              d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z">
+            </path>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="navbutton">
+    <div class="prev" (click)="prevSolution()">
+      <i class="fa-solid fa-arrow-left-long"></i>
+    </div>
+    <div class="next" (click)="nextSolution()">
+      <i class="fa-solid fa-arrow-right-long"></i>
+    </div>
+  </div>
+  <div class="swiper-pagination">
+    <span class="swiper-pagination-progressbar-fill" [ngStyle]="{'transform': 'scaleX(' + progress + ')'}"></span>
+  </div>
+</div> -->
+<!-- New Style -->
+<!-- <div class="background">
+  <div class="title">
+      <h2>Our Labs</h2>
+  </div>
+  <div class="cards-container">
+    <div *ngFor="let solution of solutions" class="card">
+      <div class="card-image" [style.backgroundImage]="'url(' + solution.src + ')' " (click)="onTakeOverClick(solution.key)">
+        <div class="overlay">
+          <h3>{{ solution.title }}</h3>
+
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="tansam-about-wrapper">
+  <!-- Left: Image -->
+  <div class="tansam-image">
+    <img src="/assets/images/tansam-about.jpeg" alt="About TANSAM" />
+  </div>
+
+  <!-- Right: Text -->
+  <div class="tansam-text">
+    <h2>ABOUT TANSAM</h2>
+    <p>
+      TANSAM (Tamil Nadu Smart and Advanced Manufacturing) is a state-of-the-art Industry Centre of Excellence, powered by Siemens, a global leader in digital transformation solutions. TANSAM was inaugurated by the Tamil Nadu Honourable Chief Minister, Thiru. M.K. Stalin, on the 8th of November 2022 situated at Tidel Park, Chennai.
+    </p>
+    <p>
+      TANSAM is established as a Section 8 company fully owned by Tamil Nadu Industrial Development Corporation (TIDCO) to facilitate innovation at all levels. In association with Siemens, the center brings together Industry 4.0 technologies to create factories of the future. It provides a platform for innovators and entrepreneurs to bring ideas from labs to market.
+    </p>
+    <h3>TANSAM Service Offerings:</h3>
+    <p>
+      TANSAM offers tailored training programs, workshops, and certifications to upskill MSME employees in automation, robotics, artificial intelligence, and data analytics.
+    </p>
+    <p>
+      Engineering services are available to MSMEs, SMEs, startups, and large enterprises in fields like AR/VR, AI, Data Analytics, Product Design & Simulation, Digital Twin, and more.
+    </p>
+    <p>
+      Courses, certifications, internships, and research collaborations are also provided for students and faculty in academia.
+    </p>
+  </div>
+</div>

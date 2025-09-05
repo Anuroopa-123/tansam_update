@@ -1,0 +1,13 @@
+{
+    "companies": [
+      { "name": "Company 1", "image": "/assets/bannerimage/20250124_164051.jpg", "website": "https://company1.com" },
+      { "name": "Company 2", "image": "https://via.placeholder.com/300x200", "website": "https://company2.com" },
+      { "name": "Company 3", "image": "https://via.placeholder.com/300x200", "website": "https://company3.com" },
+      { "name": "Company 4", "image": "https://via.placeholder.com/300x200", "website": "https://company4.com" },
+      { "name": "Company 5", "image": "https://via.placeholder.com/300x200", "website": "https://company5.com" },
+      { "name": "Company 6", "image": "https://via.placeholder.com/300x200", "website": "https://company6.com" },
+      { "name": "Company 7", "image": "https://via.placeholder.com/300x200", "website": "https://company7.com" },
+      { "name": "Company 8", "image": "https://via.placeholder.com/300x200", "website": "https://company8.com" }
+    ]
+  }
+  

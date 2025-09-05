@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+}
+
+
+/* Menu Container */
+.menu-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Tab Menu */
+.menu {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+/* Hide scrollbar for WebKit browsers */
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+/* Menu Button (default) */
+.menu button {
+  font-family: "Afacad Flux", serif;
+  flex-shrink: 0;
+  padding: 12px 20px;
+  background: #009999;
+  /* Light yellow */
+  color: #F3E5AB;
+  /* Teal */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Active Tab */
+.menu button.active {
+  background-color: #F3E5AB;
+  /* Teal */
+  color: #009999;
+  /* Light yellow */
+  transform: translateY(2px);
+  border: 2px solid #007777;
+  font-weight: 700;
+  border: none;
+}
+
+/* Hover effect */
+.menu button:hover {
+  background: #F3E5AB;
+  /* Dark blue */
+  color: #009999;
+  transform: translateY(2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Events Grid */
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 3fr));
+  gap: 5px;
+  padding: 20px;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Event Card */
+.card {
+  /* background: #ffffff; */
+  border-radius: 3px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-image {
+  transform: scale(1.1);
+}
+
+/* Card Image */
+.card-image {
+  width: 100%;
+  height: 680px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out
+}
+
+/* Card Title */
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 2px 0 5px;
+  color: #01539A;
+  text-align: start;
+  font-family: "Afacad Flux", serif;
+}
+
+.card:hover .card-title {
+  color: #009999;
+}
+
+/* Card Date */
+.card-date {
+  font-size: 10px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: -5px;
+}
+
+.card-date i {
+  color: #009999;
+  font-size: 10px;
+}
+
+/* Card Description */
+.card-description {
+  font-size: 14px;
+  color: #444;
+  text-align: justify;
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  font-family: "Poppins", serif;
+}
+
+.center-date {
+  font-size: 10px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: -5px;
+}
+
+.center-date i {
+  color: #009999;
+  font-size: 10px;
+}
+
+/* text */
+.center-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.center-image {
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.center-date.below-image {
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+  gap: 6px;
+}
+
+.center-date.below-image i {
+  color: #009999;
+  font-size: 12px;
+}
+
+
+/* for small-card */
+.small-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.small-card:hover .card-image {
+  transform: none !important;
+}
+
+
+.center-title {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  text-align: center;
+  display: block;
+}
+
+
+.center-description {
+  width: 45%;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  white-space: pre-line;
+  background-color: #fff;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.center-image {
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.remaining-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 3 images in one row */
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.small-card {
+  background: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  border: none;
+}
+
+.small-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* .remaining-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+  padding: 0 10px;
+} */
+
+.remaining-images img {
+  width: 90%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.popup-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.close-button {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: red;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu button {
+    width: 80%;
+  }
+
+  .events-container {
+    grid-template-columns: 1fr;
+  }
+
+  .center-image {
+    width: 500px;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+}

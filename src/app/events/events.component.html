@@ -1,0 +1,127 @@
+<!-- Tab Navigation -->
+<!-- <div class="menu-container">
+  <div class="menu">
+    <button
+      *ngFor="let tab of tabs"
+      (click)="selectTab(tab)"
+      [class.active]="tab === selectedTab"
+    >
+      {{ tab.name }}
+    </button>
+  </div>
+</div> -->
+
+<!-- Events Grid -->
+<!-- <div *ngIf="selectedTab" class="events-container">
+  <div *ngFor="let event of selectedTab.events" class="card">
+    <img [src]="event.image" alt="Event Image" class="card-image" />
+
+    <h2 class="card-title">{{ event.title }}</h2>
+
+    <div class="card-date">
+      <i class="fas fa-calendar-alt"></i>
+      <span>{{ event.date | date : "dd/MM/yyyy" }}</span>
+    </div>
+
+    <p class="card-description">
+      {{ event.description | slice : 0 : 110
+      }}<span *ngIf="event.description.length > 100">...</span>
+    </p>
+  </div>
+</div> -->
+
+<!-- Tab Navigation -->
+<!-- Tab Navigation -->
+<div class="menu-container">
+  <div class="menu">
+    <button
+      *ngFor="let tab of tabs"
+      (click)="selectTab(tab)"
+      [class.active]="tab.name === selectedTab?.name"
+    >
+      {{ tab.name }}
+    </button>
+  </div>
+</div>
+
+<!-- HACKATHON Tab -->
+<div *ngIf="selectedTab?.name === 'Hackathon'">
+  <!-- Show all images with title & description if no image clicked -->
+  <div *ngIf="clickedImageIndex === null" class="events-container">
+    <div
+      *ngFor="let event of selectedTab.events; let i = index"
+      class="card"
+      (click)="onHackathonImageClick(i)"
+    >
+      <img [src]="event.image" alt="Event Image" class="card-image" />
+      <h2 class="card-title">{{ event.title }}</h2>
+      <h3 class="card-date">
+        <i class="fas fa-calendar-alt"></i>
+        {{ event.date | date : "dd/MM/yyyy" }}
+      </h3>
+      <p class="card-description" [innerHTML]="event.description"></p>
+    </div>
+  </div>
+
+  <!-- Show clicked image with title and description in center -->
+  <div *ngIf="clickedImageIndex !== null">
+    <div class="center-image-card">
+      <h2 class="center-title">
+        {{ selectedTab.events[clickedImageIndex].title }}
+      </h2>
+
+      <div class="center-image-wrapper">
+        <img
+          [src]="selectedTab.events[clickedImageIndex].image"
+          class="center-image"
+          alt="Selected Event Image"
+        />
+        <div class="center-date below-image">
+          <i class="fas fa-calendar-alt"></i>
+          <span>{{
+            selectedTab.events[clickedImageIndex].date | date : "dd/MM/yyyy"
+          }}</span>
+        </div>
+      </div>
+
+      <p
+        class="center-description"
+        [innerHTML]="selectedTab.events[clickedImageIndex].description"
+      ></p>
+    </div>
+
+    <!-- Remaining images below (without title/description) -->
+    <div class="remaining-images">
+      <ng-container *ngFor="let event of remainingHackathonEvents">
+        <div (click)="onHackathonImageClick(event.index)" class="small-card">
+          <img
+            [src]="event.image"
+            class="card-image"
+            alt="Hackathon Thumbnail"
+          />
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<!-- Other Tabs -->
+<div *ngIf="selectedTab?.name !== 'Hackathon'" class="events-container">
+  <div *ngFor="let event of selectedTab?.events" class="card">
+    <img [src]="event.image" alt="Event Image" class="card-image" />
+    <h2 class="card-title">{{ event.title }}</h2>
+    <div class="card-date">
+      <i class="fas fa-calendar-alt"></i>
+      <span>{{ event.date | date : "dd/MM/yyyy" }}</span>
+    </div>
+    <p class="card-description" [innerHTML]="event.description"></p>
+  </div>
+</div>
+
+<!-- Popup Modal -->
+<div class="popup-overlay" *ngIf="popupImage" (click)="popupImage = null">
+  <div class="popup-content" (click)="$event.stopPropagation()">
+    <span class="close-button" (click)="popupImage = null">&times;</span>
+    <img [src]="popupImage" alt="Popup Image" />
+  </div>
+</div>

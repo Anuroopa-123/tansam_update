@@ -1,0 +1,80 @@
+<ng-template #fullNewsView>
+  <div class="news-detail-container">
+    <div class="topline">
+      <h2 class="news-title">
+        {{ title }}
+        <span class="news-separator"> - </span>
+        <span class="news-date">
+          {{ date ? (date | date : "MMM d, y") : "No Date Available" }}
+        </span>
+      </h2>
+    </div>
+    <img [src]="image" alt="news image" class="news-image" />
+    <div class="newsdescription">
+      <p [innerHTML]="description"></p>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #cardView>
+  <div class="news-container">
+    <div class="latest-news-title">
+      <h2>Latest News</h2>
+    </div>
+
+    <div class="news-card-container">
+      <div *ngFor="let news of paginatedNews" class="news-card">
+        <img [src]="news.image" alt="news image" class="news-image" />
+        <div class="news-content">
+          <h4>{{ news.title }}</h4>
+          <!-- <p class="news-date"><i class="fa-regular fa-calendar-days"></i> {{ news.date | date:'MMM d, y' }}</p> -->
+          <div class="datebtn">
+            <p class="news-date">
+              <i class="fa-regular fa-calendar-days"></i>
+              {{ news.date | date : "MMM d, y" }}
+            </p>
+            <button class="animated-button" (click)="viewFullNews(news)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="arr-2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+              <span class="text">VIEW</span>
+              <span class="circle"></span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="arr-1"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- <button class="view-btn" (click)="viewFullNews(news)">View</button> -->
+      </div>
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="pagination">
+      <button (click)="prevPage()" [disabled]="currentPage === 1">
+        ← Previous
+      </button>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage >= totalPages">
+        Next →
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<!-- Toggle Between Full View and Card View -->
+<ng-container *ngIf="isFullView; else cardView">
+  <ng-container *ngTemplateOutlet="fullNewsView"></ng-container>
+</ng-container>

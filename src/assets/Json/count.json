@@ -1,0 +1,26 @@
+{
+  "staticText": "TANSAM WAS",
+  "animatedTexts": ["Developers", "Designers", "Coders", "EVERYONE!"],
+  "cards": [
+    {
+      "number": "360+",
+      "text": "Clients",
+      "icon": "fas fa-users"
+    },
+    {
+      "number": "500+",
+      "text": "Projects",
+      "icon": "fas fa-folder"
+    },
+    {
+      "number": "400+",
+      "text": "Completed Project",
+      "icon": "fas fa-archive"
+    },
+    {
+      "number": "250+",
+      "text": "Employees",
+      "icon": "fas fa-users"
+    }
+  ]
+}

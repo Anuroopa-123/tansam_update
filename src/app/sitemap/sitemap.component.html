@@ -1,0 +1,156 @@
+<div class="sitemap-container">
+  <!-- <h2 class="pgtophead rti changefont title-header" id="missng">HOME</h2> -->
+
+  <!-- Start of the single-column layout for sections -->
+  <div class="sitemap-column">
+    <!-- About Us Box -->
+    <div class="box about-us-box" (click)="toggleSection('about')">
+      <h3>
+        About Us
+        <i
+          class="fa"
+          [ngClass]="{
+            'fa-chevron-down': !expanded['about'],
+            'fa-chevron-up': expanded['about']
+          }"
+        ></i>
+      </h3>
+      <div *ngIf="expanded['about']" class="submenu">
+        <a href="https://tansam.org/aboutus">TANSAM</a>
+      </div>
+    </div>
+
+    <!-- Labs Box -->
+    <div class="box labs-box" (click)="toggleSection('labs')">
+      <h3>
+        Labs
+        <i
+          class="fa"
+          [ngClass]="{
+            'fa-chevron-down': !expanded['labs'],
+            'fa-chevron-up': expanded['labs']
+          }"
+        ></i>
+      </h3>
+      <div *ngIf="expanded['labs']" class="submenu">
+        <a href="https://tansam.org/labs/Innovative_Manufacturing"
+          >Innovative Manufacturing</a
+        >
+        <a href="https://tansam.org/labs/Smart_Factory_Center"
+          >Smart Factory Center</a
+        >
+        <a href="https://tansam.org/labs/AR%2FVR%2FMR_Research_Centre"
+          >AR | VR | MR Research Centre</a
+        >
+        <a href="https://tansam.org/labs/PLM">Research Centre For PLM</a>
+        <a href="https://tansam.org/labs/Asset_Performance"
+          >Research Centre For Asset Performance</a
+        >
+        <a href="https://tansam.org/labs/Product_Innovation_Center"
+          >Product Innovation Center</a
+        >
+        <a href="https://tansam.org/labs/Predictive_Engineering"
+          >Predictive Engineering</a
+        >
+      </div>
+    </div>
+
+    <!-- Academic Initiative Box -->
+    <div
+      class="box academic-initiative-box"
+      (click)="toggleSection('academic_initiative')"
+    >
+      <h3>
+        Academic Initiative
+        <i
+          class="fa"
+          [ngClass]="{
+            'fa-chevron-down': !expanded['academic_initiative'],
+            'fa-chevron-up': expanded['academic_initiative']
+          }"
+        ></i>
+      </h3>
+      <div *ngIf="expanded['academic_initiative']" class="submenu">
+        <div
+          class="sitemap-subsection"
+          (click)="toggleSection('naan_mudhalvan'); $event.stopPropagation()"
+        >
+          <span>
+            Naan Mudhalvan
+            <i
+              class="fa"
+              [ngClass]="{
+                'fa-chevron-down': !expanded['naan_mudhalvan'],
+                'fa-chevron-up': expanded['naan_mudhalvan']
+              }"
+            ></i>
+          </span>
+          <div
+            *ngIf="expanded['naan_mudhalvan']"
+            class="submenu nested-submenu"
+          >
+            <a href="https://tansam.org/Naan_mudhlvan/up_skilling"
+              >Up Skilling</a
+            >
+            <a href="https://tansam.org/Naan_mudhalvan/faculty_development"
+              >Faculty Development</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Media Box -->
+    <div class="box media-box" (click)="toggleSection('media')">
+      <h3>
+        Media
+        <i
+          class="fa"
+          [ngClass]="{
+            'fa-chevron-down': !expanded['media'],
+            'fa-chevron-up': expanded['media']
+          }"
+        ></i>
+      </h3>
+      <div *ngIf="expanded['media']" class="submenu">
+        <a href="https://tansam.org/events">Events</a>
+        <a href="https://tansam.org/Newspaper">Print Media</a>
+        <a href="https://tansam.org/TANSAM/LinkedIN">LinkedIn</a>
+      </div>
+    </div>
+
+    <!-- Brochure Box -->
+    <div class="box brochure-box" (click)="toggleSection('brochure')">
+      <h3>
+        Brochure
+        <i
+          class="fa"
+          [ngClass]="{
+            'fa-chevron-down': !expanded['brochure'],
+            'fa-chevron-up': expanded['brochure']
+          }"
+        ></i>
+      </h3>
+      <div *ngIf="expanded['brochure']" class="submenu">
+        <a href="https://tansam.org/Brochure">Brochure PDF</a>
+      </div>
+    </div>
+
+    <!-- Contact Us Box -->
+    <div class="box contact-us-box" (click)="toggleSection('contact')">
+      <h3>
+        Contact
+        <i
+          class="fa"
+          [ngClass]="{
+            'fa-chevron-down': !expanded['Contact'],
+            'fa-chevron-up': expanded['Contact']
+          }"
+        ></i>
+      </h3>
+      <div *ngIf="expanded['contact']" class="submenu">
+        <a href="https://tansam.org/contact_us">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</div>

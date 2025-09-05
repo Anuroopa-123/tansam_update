@@ -1,0 +1,81 @@
+{
+  "title": "Global Career Connect",
+  "image": "assets/bg/gcc_bg.jpg",
+  "description": "TANSAM – Global Career Connect (GCC), backed by Tamil Nadu Industrial Development Corporation (TIDCO) under the Government of Tamil Nadu, is a platform connecting skilled professionals with global career opportunities.Global Career Connect is a leading platform that bridges the gap between skilled professionals and global career opportunities. Focusing on empowering talent, we specialise in offering tailored solutions for recruitment, skill development, and career advancement. Our mission is to connect individuals with organisations worldwide, fostering a culture of growth and collaboration. Through partnerships with top companies and institutions, we ensure access to diverse roles across industries, enabling professionals to thrive in dynamic, global environments.At Global Career Connect, we believe in transforming aspirations into achievements. As a trusted recruitment and career development partner, we connect talented individuals with global opportunities, helping them realize their dreams and reach destinations they once only imagined.",
+  "tabs": [
+    {
+      "id": "tab1",
+      "title": "Who We Are",
+      "content": "We are a dynamic and forward-thinking organization specializing in comprehensive recruitment solutions for businesses across industries. With a global outlook and a passion for talent development, GCC ensures that both companies and professionals thrive in today's competitive landscape."
+    },
+    {
+      "id": "tab2",
+      "title": "Our Mission",
+      "content": "To create a world where talent meets opportunity without boundaries, empowering dreams to turn into global success stories."
+    },
+    {
+      "id": "tab3",
+      "title": "Overseas Opportunities",
+      "content": "Unlock your global potential with Global Career Connect! We are currently hiring for leading overseas companies across various industries. If you're ready to take your career to the next level, explore our latest openings below:"
+    }
+  ],
+  "jobs": [
+    { "designation": "PLUMBER", "location": "UAE (Dubai)", "total": 750  },
+    { "designation": "ELECTRICIAN", "location": "UAE (Dubai)", "total": 750 },
+    { "designation": "SCFFOLDER ", "location": "UAE (Dubai)", "total": 500 },
+    { "designation": "STEEL FIXER ", "location": "UAE (Dubai)", "total": 500  },
+    { "designation": "Helper (to Skilled Workers)", "location": "UAE (Dubai)", "total": 750 },
+    { "designation": "PAINTER  ", "location": "UAE (Dubai)", "total": 750 },
+    { "designation": "CARPENTER ", "location": "UAE (Dubai)", "total": 500  },
+    { "designation": "WELDER", "location": "UAE (Dubai)", "total": 500 },
+    { "designation": "MASON  ", "location": "UAE (Dubai)", "total": 500 }
+  ],
+  "whyChoose": {
+    "title": "Why Choose Global Career Connect?",
+    "points": [
+      {
+        "heading": "Industry Expertise",
+        "description": "With deep industry knowledge, we understand the unique requirements of both businesses and job seekers."
+      },
+      {
+        "heading": "Tailored Solutions",
+        "description": "We provide customized services that meet the specific needs of every client and candidate."
+      },
+      {
+        "heading": "Global Network",
+        "description": "Our expansive network connects talent to opportunities worldwide."
+      },
+      {
+        "heading": "Commitment to Excellence",
+        "description": "We are driven by a commitment to delivering superior recruitment and career development services."
+      }
+    ]
+  },
+  "industries": {
+    "title": "Industries We Serve",
+    "list": [
+      "Construction",
+      "Engineering",
+      "Sales & Marketing",
+      "Information Technology",
+      "Healthcare",
+      "Finance & Accounting"
+    ]
+  },
+  "connect": {
+    "title": "Let's Connect!",
+    "description": "Looking for your next career move or searching for the perfect candidate to join your organization? At Global Career Connect, we are here to make it happen."
+  },
+  "contactUs": {
+    "title": "CONTACT US",
+    "number": "+91 8681878889 | +91 9514838485",
+    "emailJobs": {
+      "text": "To post your resume for suitable jobs, send your application to the following email:",
+      "email": "gcc.tansam@gmail.com"
+    },
+    "emailTraining": {
+      "text": "To associate with Global Career Connect – Training program, email us at:",
+      "email": "advisor.gcc@tansam.org"
+    }
+  }
+}

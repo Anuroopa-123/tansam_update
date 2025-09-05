@@ -1,0 +1,335 @@
+/* Footer Styling */
+.animated-footer {
+    position: relative;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 30px 20px 5px 20px;
+    font-family: sans-serif;
+    overflow: hidden;
+    margin-top: 25px;
+    z-index: 1;
+    border-radius: 1px 1px 0 0;
+    border: 1px solid #ccc;
+}
+
+/* Animated Horizontal Lines */
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 0, 0, 0.1);
+    top: 33%;
+    left: -100%;
+    animation: moveLines 5s linear infinite;
+}
+
+.line:nth-child(1) { top: 33%; animation-delay: 1s; }
+.line:nth-child(2) { top: 50%; animation-delay: 3s; }
+.line:nth-child(3) { top: 67%; animation-delay: 6s; }
+
+/* Keyframes for Moving Lines */
+@keyframes moveLines {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.details img {
+    width: 120px;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: 45px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+}
+.details img:hover {
+    transform: scale(1.1) rotateY(15deg); /* Slight 3D tilt effect */
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+.details h3{
+    text-align: start;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+    text-align: left;
+    font-family: "Rubik", serif;
+    z-index: 2;
+}
+/* Left Box - Company Info */
+.company-info {
+    flex: 1;
+    max-width: 350px;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+    align-items: center ;
+}
+
+.company-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: "Afacad Flux", serif;
+}
+
+.company-info p {
+    display: flex;
+    align-items: center; /* Keeps icon and text in a straight line */
+    gap: 8px; /* Adds space between icon and text */
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.details a{
+    color: #000;
+    text-decoration: none;
+}
+
+.details a:hover{
+    color: #FFD700;
+}
+
+.company-info i {
+    color: #FFD700;
+    font-size: 16px; /* Adjust icon size if needed */
+}
+
+/* Right Box - Links & Services */
+.links {
+    flex: 3;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 40px;
+}
+
+/* Footer Section */
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: #00ffff !important;
+    font-family: "Afacad Flux", serif;
+}
+
+.footer-section h3::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 70%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(-50%);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.footer-section ul li {
+    display: flex;
+    align-items: center; /* Keeps icon and text in a straight line */
+    gap: 5px; /* Space between icon and text */
+    margin-bottom: 8px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.footer-section ul li:hover {
+    transform: translateX(10px); /* Moves the whole item slightly to the right */
+}
+
+.footer-section ul li::before {
+    content: "\f101"; /* Unicode for Font Awesome right arrow */
+    color: #FFD700;
+    font-family: "Font Awesome 5 Free"; /* Ensure Font Awesome is loaded */
+    font-weight: 900;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-5px); /* Start slightly left */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer-section ul li:hover::before {
+    opacity: 1; /* Show icon on hover */
+    transform: translateX(0); /* Move to normal position */
+}
+
+
+.footer-section ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #009999;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+}
+
+.copyright, .developer {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.developer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.developer a:hover {
+    text-decoration: underline;
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between icons */
+}
+
+.socialmedia li {
+    list-style: none;
+}
+
+.socialmedia li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Icon size */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+    color: #fff; /* Default white color */
+}
+
+/* Hover effect with original brand colors and scale */
+.socialmedia li a:hover {
+    transform: scale(2.5);
+}
+
+.socialmedia li a:hover .fa-facebook { color: #1877F2; } /* Facebook Blue */
+.socialmedia li a:hover .fa-instagram { color: #E4405F; } /* Instagram Pink */
+.socialmedia li a:hover .fa-x-twitter { color: #000000; } /* Twitter (X) Black */
+.socialmedia li a:hover .fa-linkedin { color: #0077B5; } /* LinkedIn Blue */
+
+
+/* ✅ Mobile & Tablet Responsive Design */
+@media (max-width: 1024px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 95%;
+    }
+
+    .company-info {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .details {
+        align-items: start;
+    }
+
+    .details img {
+        width: 100px;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .footer-section ul {
+        text-align: center;
+    }
+
+    .footer-section ul li {
+        justify-content: center;
+    }
+
+    .socialmedia {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .company-info {
+        text-align: start;
+        max-width: 100%;
+    }
+
+    .details img {
+        width: 90px;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .footer-section ul {
+        text-align: start;
+    }
+
+    .footer-section ul li {
+        justify-content: start;
+    }
+
+    .footer-bottom {
+        padding: 10px;
+    }
+}
