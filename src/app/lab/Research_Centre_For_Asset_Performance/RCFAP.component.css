@@ -1,0 +1,123 @@
+/* General Container */
+.im-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+}
+
+/* Main Heading */
+.im-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1f3a6e;
+  font-weight: 700;
+}
+
+/* Section Styling */
+.im-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.im-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Images */
+.im-section img {
+  width: 45%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.im-section.section-3 img {
+  width: 35%;
+}
+
+/* Content */
+.im-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Section Headings */
+.im-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #2a4d8f;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Subheadings */
+.im-content h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem 0;
+  color: #1f3a6e;
+  font-weight: 600;
+  text-align: left;   /* ✅ default left */
+}
+
+/* Centered only for COMPETENCY & SKILLS */
+.center-heading {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+.im-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.im-content li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Section 3 Multi-column Lists */
+.section-3-lists .lists-container {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-3-lists .list-column {
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .im-section,
+  .im-section.reverse {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .im-section img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .im-content {
+    width: 100%;
+    text-align: left;
+  }
+
+  .section-3-lists .lists-container {
+    flex-direction: column;
+  }
+}
