@@ -4,9 +4,7 @@
 body {
   background-image: url('/assets/headerimage/tansambg.png');
 }
-
 .clients {
-  /* background: none !important; */
   text-align: center;
   color: #095296;
   margin-top: 60px;
@@ -17,28 +15,23 @@ body {
   font-size: 30px;
   font-weight: 800;
   color: #009999;
-  align-items: center;
-  text-align: center;
-  font-family: "Faculty Glyphic", serif;
   text-transform: uppercase;
+  text-align: center;
 }
 
+/* Shared styles */
 .logo-slider {
   overflow: hidden;
-  padding: 30px 0 0 0;
+  padding: 30px 0;
   white-space: nowrap;
   position: relative;
 }
 
-.logo-slider:hover .logos-slide {
-  animation-play-state: paused;
-}
-
 .logos-slide {
   display: inline-block;
-  animation: 20s slide infinite linear;
 }
 
+/* Logo image styling */
 .logos-slide img {
   width: 183px;
   height: 83px;
@@ -47,17 +40,7 @@ body {
   cursor: pointer;
 }
 
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
-}
-
+/* Hover label (optional) */
 .logo-slider img:hover::after {
   content: attr(alt);
   position: absolute;
@@ -65,8 +48,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   padding: 5px 10px;
-  /* background-color: rgba(0, 0, 0, 0.7); */
-  /* color: white; */
   border-radius: 5px;
   font-size: 14px;
   white-space: nowrap;
@@ -76,4 +57,35 @@ body {
 
 .logo-slider img::after {
   opacity: 0;
+}
+
+/* ===== Scroll Animations ===== */
+
+/* Industrial - scroll to left (LTR) */
+.scroll-left .logos-slide {
+  animation: scroll-left 60s linear infinite;
+}
+
+/* Academic - scroll to right (RTL) */
+.scroll-right .logos-slide {
+  animation: scroll-right 60s linear infinite;
+}
+
+/* Keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }

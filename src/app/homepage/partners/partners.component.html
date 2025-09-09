@@ -1,27 +1,27 @@
 <section class="clientsec">
-    <div class="clients">
-        <h2>Industrial  Clients</h2>
+  <div class="clients">
+    <h2>Industrial Clients</h2>
+  </div>
+  <div class="logo-slider scroll-left">
+    <div class="logos-slide">
+      <img *ngFor="let partner of partners" [src]="partner.src" [alt]="partner.alt" [title]="partner.alt"
+           (click)="openInNewTab(partner.link)">
+      <img *ngFor="let partner of partners" [src]="partner.src" [alt]="partner.alt" [title]="partner.alt"
+           (click)="openInNewTab(partner.link)">
     </div>
-
-    <div class="logo-slider">
-        <div class="logos-slide">
-            <img *ngFor="let partner of partners" [src]="partner.src" [alt]="partner.alt" [title]="partner.alt"
-                (click)="openInNewTab(partner.link)">
-        </div>
-    </div>
+  </div>
 </section>
 
-
-<!-- Academic Clients -->
 <section class="clientsec">
   <div class="clients">
     <h2>Academic Clients</h2>
   </div>
-
-  <div class="logo-slider">
+  <div class="logo-slider scroll-right">
     <div class="logos-slide">
       <img *ngFor="let partner of academicClients" [src]="partner.src" [alt]="partner.alt" [title]="partner.alt"
-        (click)="openInNewTab(partner.link)">
+           (click)="openInNewTab(partner.link)">
+      <img *ngFor="let partner of academicClients" [src]="partner.src" [alt]="partner.alt" [title]="partner.alt"
+           (click)="openInNewTab(partner.link)">
     </div>
   </div>
 </section>
