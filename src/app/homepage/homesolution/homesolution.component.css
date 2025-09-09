@@ -1,12 +1,12 @@
 .tansam-about-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+  max-width: 1288px; /* or 100%, or any value you prefer */
+  margin: 0 auto;     /* center it horizontally */
   padding: 50px 30px;
-  background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  /* background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
 
 /* Shared row for both sections */
 .section-row {
@@ -28,7 +28,7 @@
 .section-text h3 {
   font-size: 28px;
   font-weight: 700;
-  color: #095296;
+  color: #00569A;
   margin-bottom: 15px;
 }
 
