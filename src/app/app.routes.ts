@@ -25,12 +25,12 @@ import { SitemapComponent } from './sitemap/sitemap.component';
 import { FrequentquestionComponent } from './frequentquestion/frequentquestion.component';
 import { AnnouncementComponent } from './homepage/announcement/announcement.component';
 import { IMComponent } from './lab/inovative_manufacturing/IM.component';
-import { ARComponent } from './lab/AR_VR_MR_Research_Centre/AR.component';
-import { PEComponent } from './lab/Predictive_Engineering/PE.component';
+// import { ARComponent } from './lab/AR_VR_MR_Research_Centre/AR.component';
+// import { PEComponent } from './lab/Predictive_Engineering/PE.component';
 import { SFCComponent } from './lab/Smart_Factory_Center/SFC.component';
 import { PLMComponent } from './lab/Research_Centre_For_PLM/PLM.component';
 import { RCFAPComponent } from './lab/Research_Centre_For_Asset_Performance/RCFAP.component';
-import { PICComponent } from './lab/Product_Innovation_Center/PIC.component';
+// import { PICComponent } from './lab/Product_Innovation_Center/PIC.component';
 
 
 
@@ -51,7 +51,7 @@ export const routes: Routes = [
   { path: 'TANSAM_Project', component: ProjectComponent },
   { path: 'industries', component: IndustryComponent },
   { path: 'feedback', component: FeedbackComponent },
-  
+
   {
     path: 'latestnews',
     component: LatestnewsComponent,
@@ -66,12 +66,12 @@ export const routes: Routes = [
   { path: 'faq', component: FrequentquestionComponent },
   { path: 'announcement', component: AnnouncementComponent },
   { path: 'labs/Innovative_Manufacturing', component: IMComponent },
-  { path: 'labs/AR_VR_MR_Research_Centre', component: ARComponent },
-  { path: 'labs/Predictive_Engineering', component: PEComponent },
+  // { path: 'labs/AR_VR_MR_Research_Centre', component: ARComponent },
+  // { path: 'labs/Predictive_Engineering', component: PEComponent },
   { path: 'labs/Smart_Factory_Center', component: SFCComponent },
   { path: 'labs/Research_Centre_For_PLM', component: PLMComponent },
   { path: 'labs/Research_Centre_For_Asset_Performance', component: RCFAPComponent },
-  { path: 'labs/Product_Innovation_Center', component: PICComponent },
+  // { path: 'labs/Product_Innovation_Center', component: PICComponent },
 
 
 
