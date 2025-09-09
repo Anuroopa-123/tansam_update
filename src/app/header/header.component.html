@@ -138,40 +138,22 @@
     [ngClass]="{ active: isDropdownOpen['labs'] }"
     (click)="toggleDropdown('labs')"
   >
-    <span class="active">
+  <li class="labs-dropdown">
+    <span class="menu-label">
       Our Research Labs
-      <i
-        class="fa-solid"
-        [ngClass]="{
-          'fa-chevron-down': !isDropdownOpen['labs'],
-          'fa-chevron-up': isDropdownOpen['labs']
-        }"
-      ></i>
+      <i class="fa-solid fa-chevron-down"></i>
     </span>
-    <ul class="dropdown-menu">
-      <li>
-        <a [routerLink]="['/labs/Innovative_Manufacturing']">Innovative Manufacturing</a>
-      </li>
-      <li>
-        <a [routerLink]="['/labs/Smart_Factory_Center']">Smart Factory Center</a>
-      </li>
-      <li>
-        <a [routerLink]="['/labs/AR_VR_MR_Research_Centre']">AR | VR | MR Research Centre</a>
-      </li>
-      <li>
-        <a [routerLink]="['/labs/Research_Centre_For_PLM']">Research Centre for PLM</a>
-      </li>
-      <li>
-        <a [routerLink]="['/labs/Research_Centre_For_Asset_Performance']">Research Centre for Asset Performance</a>
-      </li>
-      <li>
-        <a [routerLink]="['/labs/Product_Innovation_Center']">Product Innovation Center</a>
-      </li>
-      <li>
-        <a [routerLink]="['/labs/Predictive_Engineering']">Predictive Engineering</a>
-      </li>
+    <ul class="labs-grid">
+      <li><a [routerLink]="['/labs/Innovative_Manufacturing']">Innovative Manufacturing</a></li>
+      <li><a [routerLink]="['/labs/Smart_Factory_Center']">Smart Factory Center</a></li>
+      <li><a [routerLink]="['/labs/AR_VR_MR_Research_Centre']">AR | VR | MR Research Centre</a></li>
+      <li><a [routerLink]="['/labs/Research_Centre_For_PLM']">Research Centre for PLM</a></li>
+      <li><a [routerLink]="['/labs/Research_Centre_For_Asset_Performance']">Research Centre for Asset Performance</a></li>
+      <li><a [routerLink]="['/labs/Product_Innovation_Center']">Product Innovation Center</a></li>
+      <li><a [routerLink]="['/labs/Predictive_Engineering']">Predictive Engineering</a></li>
     </ul>
   </li>
+
 
     <!-- <li
       class="dropdown"
