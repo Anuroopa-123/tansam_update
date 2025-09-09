@@ -269,7 +269,7 @@
 .header-title .main-title {
   font-size: 26px;
   font-weight: bold;
-  color: #01539A;
+  color: #00569A;
   margin: 0;
   white-space: nowrap; /* keep it single line */
   font-family: "Red Rose", serif;
@@ -279,7 +279,7 @@
 .subtitle {
   font-size: 18px;
   font-weight: normal;
-  color: #01539A;
+  color: #00569A;
   margin-top: 4px;
   font-family: "Red Rose", serif;
 }
