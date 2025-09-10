@@ -371,13 +371,14 @@
 /* Hover Effect (Only Changes Color, Does NOT Open Dropdown) */
 .nav-list li a:hover,
 .nav-list li span:hover {
-  color: #009999;
+  color: #00569A;
 }
 
 .nav-list li a:hover,
 .nav-list li span {
   font-family: "Ubuntu", serif;
   font-size: 18px;
+
 }
 
 .active i {
@@ -426,7 +427,8 @@
 
 .dropdown-menu li a {
   text-decoration: none;
-  color: inherit;
+  /* color: inherit; */
+  color:#000;
   flex-grow: 1;
 }
 
@@ -1000,4 +1002,7 @@
   .labs-dropdown .labs-grid {
     grid-template-columns: 1fr;
   }
+}
+.dropdown-menu li.no-arrow::after {
+  content: none;
 }
