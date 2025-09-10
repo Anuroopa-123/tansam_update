@@ -210,10 +210,8 @@
         ></i>
       </span>
       <ul class="dropdown-menu">
-        <li>
-          <!-- <i class="fa-solid fa-angles-right"></i -->
-            <a [routerLink]="['Naan_mudhlvan/up_skilling']">Naan Mudhalvan</a>
-
+        <li class="no-arrow">
+          <a [routerLink]="['Naan_mudhlvan/up_skilling']">Naan Mudhalvan</a>
         </li>
         <!-- <li><i class="fa-solid fa-angles-right"></i><a [routerLink]="['']">Other Initiative</a></li> -->
       </ul>
@@ -236,7 +234,7 @@
         ></i>
       </span>
       <ul class="dropdown-menu">
-        <li *ngFor="let media of mediaItems">
+        <li class="no-arrow" *ngFor="let media of mediaItems">
           <!-- <i class="fa-solid fa-angles-right"></i> -->
           <!-- <a
             [routerLink]="
