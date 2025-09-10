@@ -30,6 +30,7 @@ import { IMComponent } from './lab/inovative_manufacturing/IM.component';
 import { SFCComponent } from './lab/Smart_Factory_Center/SFC.component';
 import { PLMComponent } from './lab/Research_Centre_For_PLM/PLM.component';
 import { RCFAPComponent } from './lab/Research_Centre_For_Asset_Performance/RCFAP.component';
+import { ARVRComponent } from './lab/ar_vr/arvr';
 // import { PICComponent } from './lab/Product_Innovation_Center/PIC.component';
 
 
@@ -65,12 +66,13 @@ export const routes: Routes = [
   { path: 'sitemap', component: SitemapComponent },
   { path: 'faq', component: FrequentquestionComponent },
   { path: 'announcement', component: AnnouncementComponent },
-  { path: 'labs/Innovative_Manufacturing', component: IMComponent },
+  { path: 'lab/Innovative_Manufacturing', component: IMComponent },
+  {path:'lab/ar_vr',component:ARVRComponent},
   // { path: 'labs/AR_VR_MR_Research_Centre', component: ARComponent },
   // { path: 'labs/Predictive_Engineering', component: PEComponent },
-  { path: 'labs/Smart_Factory_Center', component: SFCComponent },
-  { path: 'labs/Research_Centre_For_PLM', component: PLMComponent },
-  { path: 'labs/Research_Centre_For_Asset_Performance', component: RCFAPComponent },
+  { path: 'lab/Smart_Factory_Center', component: SFCComponent },
+  { path: 'lab/Research_Centre_For_PLM', component: PLMComponent },
+  { path: 'lab/Research_Centre_For_Asset_Performance', component: RCFAPComponent },
   // { path: 'labs/Product_Innovation_Center', component: PICComponent },
 
 
