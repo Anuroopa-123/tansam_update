@@ -1,0 +1,63 @@
+<div class="timeline-container">
+  <h2 class="timeline-heading">Website and App Development</h2>
+  <div class="timeline-subtitle">
+    Process is everything. It’s our IP, our bread and butter. Years and years of experience, mistakes and success have gone into creating the best possible experience, and equip us with the best tools to navigate the sometimes challenging waters of app development.
+  </div>
+  <div class="timeline-grid">
+    <div class="timeline-sidebar">
+      <div class="phase-title">PHASE A – R&D</div>
+      <ng-container *ngFor="let step of phaseA; let idx = index">
+        <div
+          class="timeline-step"
+          [class.active]="steps.indexOf(step) === activeStepIdx"
+          (click)="selectStep(steps.indexOf(step))"
+        >
+          <div class="step-circle">
+            <span class="material-icons">{{step.icon}}</span>
+          </div>
+          <span class="step-label">{{step.id}}</span>
+          <span class="step-title">{{step.title}}</span>
+        </div>
+      </ng-container>
+      <div class="phase-title phase-b">PHASE B – Development</div>
+      <ng-container *ngFor="let step of phaseB; let idx = index">
+        <div
+          class="timeline-step"
+          [class.active]="steps.indexOf(step) === activeStepIdx"
+          (click)="selectStep(steps.indexOf(step))"
+        >
+          <div class="step-circle">
+            <span class="material-icons">{{step.icon}}</span>
+          </div>
+          <span class="step-label">{{step.id}}</span>
+          <span class="step-title">{{step.title}}</span>
+        </div>
+      </ng-container>
+      <a class="deep-dive-link" href="/">
+        Back to Main <span class="arrow">›</span>
+      </a>
+    </div>
+    <div class="timeline-detail-card" *ngIf="activeStep">
+      <h3 class="timeline-detail-title">{{activeStep.detailTitle}}</h3>
+      <h2 class="timeline-detail-head">{{activeStep.detailHead}}</h2>
+      <ul>
+        <li *ngFor="let detail of activeStep.details">
+          <span *ngIf="detail.includes('Lean Methodology')">
+            <a href="https://en.wikipedia.org/wiki/Lean_methodology" target="_blank">Lean Methodology</a>.
+          </span>
+          <span *ngIf="!detail.includes('Lean Methodology')">{{detail}}</span>
+        </li>
+      </ul>
+      <p *ngIf="activeStep.note">
+        {{activeStep.note}}
+        <a *ngIf="activeStep.sampleLink?.url1" [href]="activeStep.sampleLink.url1" target="_blank">{{activeStep.sampleLink.text}}</a>
+        <a *ngIf="activeStep.sampleLink?.url2" [href]="activeStep.sampleLink.url2" target="_blank">&amp; Prototype</a>
+        <a *ngIf="!activeStep.sampleLink?.url1 && activeStep.sampleLink?.url" [href]="activeStep.sampleLink.url" target="_blank">{{activeStep.sampleLink.text}}</a>
+      </p>
+      <button *ngIf="activeStep.sampleLink && !activeStep.sampleLink.url1 && activeStep.sampleLink.text" class="spec-sheet-btn">{{activeStep.sampleLink.text}}</button>
+      <div *ngIf="activeStep.tools?.length" class="tools-used">
+        <span *ngFor="let tool of activeStep.tools">{{tool}}</span>
+      </div>
+    </div>
+  </div>
+</div>

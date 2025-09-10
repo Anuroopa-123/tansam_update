@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import { EmailService, RawMediaItem } from '../services/api.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule,RouterLinkActive,RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
@@ -104,4 +104,5 @@ export class HeaderComponent implements OnInit {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     this.isScrolled = scrollPosition > 200;
   }
+
 }

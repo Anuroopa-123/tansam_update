@@ -31,6 +31,7 @@ import { SFCComponent } from './lab/Smart_Factory_Center/SFC.component';
 import { PLMComponent } from './lab/Research_Centre_For_PLM/PLM.component';
 import { RCFAPComponent } from './lab/Research_Centre_For_Asset_Performance/RCFAP.component';
 import { ARVRComponent } from './lab/ar_vr/arvr';
+import { DeepDriveComponent } from './deep-drive/deep-drive';
 // import { PICComponent } from './lab/Product_Innovation_Center/PIC.component';
 
 
@@ -73,6 +74,7 @@ export const routes: Routes = [
   { path: 'lab/Smart_Factory_Center', component: SFCComponent },
   { path: 'lab/Research_Centre_For_PLM', component: PLMComponent },
   { path: 'lab/Research_Centre_For_Asset_Performance', component: RCFAPComponent },
+  {path:'deep-drive',component:DeepDriveComponent}
   // { path: 'labs/Product_Innovation_Center', component: PICComponent },
 
 

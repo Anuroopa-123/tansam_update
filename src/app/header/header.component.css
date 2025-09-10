@@ -7,22 +7,26 @@
 } */
 /* Ensures the header elements (social media, notification, buttons) are in a single row */
 
-.header {
+/* Common container to align with logo section */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 47px; /* Matches logo section's 10px 99px */
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  background-color:#009999;
+}
+
+/* Topline background */
+.topline {
+  background-color: #009999;
+  width: 100%;
 }
 
 /* Social Media Icons */
 .socialmedia {
   display: flex;
   gap: 10px;
-  justify-content: center;
-  align-items: center;
   align-items: center;
 }
 
@@ -41,30 +45,26 @@
   overflow: hidden;
 }
 
-/* Rotate Effect */
+/* Icon rotation */
 .socialmedia a:hover {
   transform: rotate(360deg);
 }
 
-/* Unique Background Colors */
+/* Social icon colors */
 .facebook {
   background: #1877f2;
 }
-
 .twitter {
   background: black;
-  /* X (Twitter) */
 }
-
 .instagram {
   background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
 }
-
 .linkedin {
   background: #0077b5;
 }
 
-/* Glow Effect */
+/* Pulse effect */
 .socialmedia a:hover::before {
   content: "";
   position: absolute;
@@ -75,29 +75,58 @@
   animation: pulse 0.6s ease-in-out;
 }
 
-/* Hover Scale Effect */
-.socialmedia a:hover i {
-  transform: scale(1.2);
-}
-
-/* Icon Style */
 .socialmedia i {
   transition: transform 0.3s ease;
   color: white;
 }
+.socialmedia a:hover i {
+  transform: scale(1.2);
+}
 
-/* Pulse Effect */
 @keyframes pulse {
   0% {
     transform: scale(1);
     opacity: 0.8;
   }
-
   100% {
     transform: scale(1.4);
     opacity: 0;
   }
 }
+
+/* Right-aligned header buttons */
+.topright-container {
+  display: flex;
+  gap: 15px;
+}
+
+.topright {
+  background: #009999;
+  border-radius: 8px;
+}
+
+.topright a {
+  color: #F3E5AB !important;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-family: "Afacad Flux", serif;
+  font-weight: bold;
+}
+
+.topright:hover {
+  background: #F3E5AB;
+}
+.topright:hover a {
+  color: #009999 !important;
+}
+
+/* SITE MAP link (optional styling) */
+.rightside a {
+  text-decoration: none;
+  color: #009999;
+  font-weight: bold;
+}
+
 
 /* Scrolling Notification Container */
 .scrollingnotif {
@@ -461,7 +490,7 @@
   padding-left: 0px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .sub-dropdown li:hover {
@@ -494,6 +523,7 @@
   color: #F3E5AB !important;
   /* Change text and icon color on hover */
 }
+
 
 
 /* HAMBURGER MENU (FOR MOBILE) */

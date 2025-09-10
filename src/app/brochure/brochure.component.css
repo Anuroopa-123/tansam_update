@@ -111,3 +111,151 @@ body {
         font-size: 12px;
     }
 }
+
+
+
+
+/* new work */
+  .timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .timeline-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  .underline {
+    width: 50px;
+    height: 4px;
+    background: #00569A;
+    margin: 10px auto 30px auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+    border-left: 2px solid #00569A;
+  }
+
+  .phase-label {
+    color: #00569A;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding-left: 10px;
+  }
+
+  .timeline-item {
+    margin-bottom: 40px;
+  }
+
+  /* NEW FLEX ROW for marker + content */
+  .timeline-row {
+    display: flex;
+    align-items: center; /* vertically center marker */
+    gap: 20px;
+    position: relative;
+  }
+
+  /* Dot marker */
+  .timeline-marker {
+    width: 14px;
+    height: 14px;
+    background: #00569A;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-left: -47px; /* align it with the line */
+    animation: bounce 1.5s infinite;
+  }
+
+  /* Timeline bounce animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  .timeline-content {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    flex: 1;
+  }
+
+  .timeline-content h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+  }
+
+  .timeline-content h3 span {
+    font-weight: 600;
+    margin-left: 8px;
+    color: #555;
+  }
+
+  .timeline-content p,
+  .timeline-content ul {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .timeline-content ul {
+    padding-left: 20px;
+  }
+
+  button {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 6px 14px;
+    background: none;
+    color: #00569A;
+    border: 1px solid #00569A;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  button:hover {
+    background: #00569A;
+    color: #fff;
+  }
+
+  /* deep dive */
+
+  .deep-dive-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #00569A; /* pink color */
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .deep-dive-link:hover {
+    color: #00569A; /* darker pink on hover */
+  }
+
+  .deep-dive-link .arrow {
+    margin-left: 6px;
+    font-weight: 700;
+    font-size: 18px;
+    transition: margin-left 0.3s ease;
+  }
+
+  .deep-dive-link:hover .arrow {
+    margin-left: 12px; /* arrow moves right on hover */
+  }

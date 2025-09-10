@@ -9,24 +9,31 @@ import { CommonModule } from '@angular/common';
   templateUrl: './brochure.component.html',
   styleUrls: ['./brochure.component.css'],
 })
-export class BrochureComponent implements OnInit {
-  brochures: any[] = [];
+export class BrochureComponent  {
+  // brochures: any[] = [];
 
-  constructor(private http: HttpClient) {}
+  // constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-    this.loadBrochures();
+  // ngOnInit(): void {
+  //   this.loadBrochures();
+  // }
+
+  // loadBrochures(): void {
+  //   this.http
+  //     .get<{ brochures: any[] }>('assets/Json/brochure.json') // Fetch JSON file
+  //     .subscribe((response) => {
+  //       this.brochures = response.brochures; // Assign data to component variable
+  //     });
+  // }
+
+  // openPdf(pdfUrl: string): void {
+  //   window.open(pdfUrl, '_blank'); // Open PDF in a new tab
+  // }
+  scrollToTimeline(): void {
+    const timelineElement = document.getElementById('timeline');
+    if (timelineElement) {
+      timelineElement.scrollIntoView({ behavior: 'smooth' });
+    }
   }
-
-  loadBrochures(): void {
-    this.http
-      .get<{ brochures: any[] }>('assets/Json/brochure.json') // Fetch JSON file
-      .subscribe((response) => {
-        this.brochures = response.brochures; // Assign data to component variable
-      });
-  }
-
-  openPdf(pdfUrl: string): void {
-    window.open(pdfUrl, '_blank'); // Open PDF in a new tab
-  }
+  
 }
