@@ -242,14 +242,14 @@ export class HeroComponent implements OnInit {
       title: 'DPH LAUNCH',
       caption: 'Be a part of our growing community.',
     },
-    {
-      slider_image: 'assets/bannerimage/Army.jpeg',
-      slider_title: 'Sixth Slide',
-      published: true,
-      alt: 'Slide 6',
-      title: 'IASC Building Automation Specialist Training Program',
-      caption: 'Be a part of our growing community.',
-    },
+    // {
+    //   slider_image: 'assets/bannerimage/Army.jpeg',
+    //   slider_title: 'Sixth Slide',
+    //   published: true,
+    //   alt: 'Slide 6',
+    //   title: 'IASC Building Automation Specialist Training Program',
+    //   caption: 'Be a part of our growing community.',
+    // },
     {
       slider_image: 'assets/bannerimage/visit.jpeg',
       slider_title: 'Seventh Slide',
